@@ -1,0 +1,13 @@
+
+I joined this class late so some notes are not included 
+
+Day 7(09/02/2026): 
+    The number one idea that i have learned is always look at the API documentation.
+    Also its a very good practice to keep api tokens secret, so to anyone reading this you shouldnt be able to see my keys. 
+    
+    from dotenv import dotenv
+    dotenv = DotEnv()
+    toekn = dotenv.get("UGRC_API_TOKEN)
+    
+    Lines 8-10 is a quick way to store an api key
+
