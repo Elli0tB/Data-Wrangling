@@ -4,8 +4,6 @@ import requests
 import json
 import pandas as pd
 # TODO: make sure you define UGRC_API_TOKEN in .env in the same dir
-load_dotenv()
-token = os.getenv("UGRC_API_TOKEN")
 def request(url, params):
     try:
         response = requests.get(url, params=params, timeout=10)
@@ -16,43 +14,65 @@ def request(url, params):
         return False
     return response.json()
 
+def getGeometryKeys(geometry):
+    if isinstance(geometry,dict):
+        return tuple(sorted(geometry.keys()))
+    return None
+
+
+def getWKID(geometry): 
+    if isinstance(geometry, dict):
+        spatialReference = geometry.get("spatialReference")
+        if spatialReference is None:
+            return None
+        return spatialReference.get("wkid")
+    return None
+
 def assemble(response):
+    #check is the response is a dict that I can use 
+    if not isinstance(response, dict):
+        print("----ERROR RESPONSE WAS NOT A VALID DICT----")
+        return False
+
     records = response["result"]
-    print(records[0])
-
     dataFrame = pd.DataFrame(records)
-    print(dataFrame["attributes"].iloc[0])
-    print(dataFrame["geometry"].iloc[0])
 
-   # print(dataFrame.columns)
-    """
-    print(dataFrame["shape@"].iloc[0])  # inspect one raw geometry value
-    print(type(dataFrame["shape@"].iloc[0]))
+    #check for any null in the geometry which should just be the shape field
+    if dataFrame["geometry"].isnull().sum() > 0:
+        print("----ERROR GEOMETRY WAS NOT FOUND IN THE RECORDS----")
+        return False
 
-    print(dataFrame["shape@"].isna().sum())
-    print(dataFrame["shape@"].apply(lambda g: g is None or g == {}).sum())
-    dataFrame["geom_keys"] = dataFrame["shape@"].apply(lambda g: tuple(sorted(g.keys())) if isinstance(g, dict) else None)
-    print(dataFrame["geom_keys"].value_counts())
+    #check that geometry has all of its keys 
+    geometry_keys = dataFrame["geometry"].apply(getGeometryKeys)
+    print(geometry_keys.value_counts()) 
 
-    dataFrame["wkid"] = dataFrame["shape@"].apply(lambda g: g.get("spatialReference", {}).get("wkid") if isinstance(g, dict) else None)
-    print(dataFrame["wkid"].value_counts())
+    #check that wkid exists for all geometry 
+    wkid = dataFrame["geometry"].apply(getWKID)
+    print(wkid.value_counts())
 
-    # Export your clean DataFrame to gis_output.csv (using index=False).
-    """
+    #export the file to a cvs
+    dataFrame.to_csv('gis_output.csv', index=False)
 
-params = {"apikey": token}
+    return dataFrame
 
-url_SIGD = "https://api.mapserv.utah.gov/api/v1/info/featureClassNames?sgidCategory=utilities"
+def validate(dataFrame):
+    print(f"\nTotal items gathered: {dataFrame.shape[0]}\n")
+    print(f"\n----Printing the data frames info----\n")
+    dataFrame.info()
+    print(f"\n----Printing data frame head----\n{dataFrame.head(10)}\n")
 
-url_Field = "https://api.mapserv.utah.gov/api/v1/info/fieldnames/electrical_lines"
+def main():
+    load_dotenv()
+    token = os.getenv("UGRC_API_TOKEN")
+    params = {"apikey": token}
 
-url = "https://api.mapserv.utah.gov/api/v1/search/utilities.electrical_lines/"
-fields = "objectid, xid, shape@"
+    url = "https://api.mapserv.utah.gov/api/v1/search/utilities.electrical_lines/"
+    fields = "objectid,xid,shape@"
 
-field_request = request(url+fields, params)
+    field_request = request(url+fields, params)
+    dataFrame = assemble(field_request)
+    validate(dataFrame)
+    #print(json.dumps(field_request, indent=4))
 
-assemble(field_request)
-#print(json.dumps(field_request, indent=4))
-
-
+main()
 
