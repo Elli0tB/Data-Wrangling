@@ -11,3 +11,9 @@ Day 7(09/02/2026):
     
     Lines 8-10 is a quick way to store an api key
 
+Date (09/21/2026): 
+    We are staring the final project today. first we need to look into what our project is going to be. 
+    A few thoughts that came to mind is energy grids and how expensive, powerful, or accesible energy is. 
+    Also transportation specificyl public transport is something that could be intesting, trains and buses is where id want to start
+    Maybe i should look into co2 emissions there is a bunch of power plants i found on gis maybe comparing them to cars? idk why that would matter tho so idk
+    
