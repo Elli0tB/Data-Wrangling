@@ -1,0 +1,66 @@
+1. Part I: Raw Stage (Preservation & Assessment)
+    Provenance & Meaning: 
+        The url is "https://api.eia.gov/v2/electricity/state-electricity-profiles/summary/data/"
+        as of current i retreaved this data on the 23 of september, 
+        and it was collected via their web api.
+        One row is the state and the data tied to it that is their energy production, cardbon emisions from it, price for a kilowat hour in cents. 
+
+    Evidence & Assumptions: 
+        the data is 48 rows by 13 colums which was odd since i thought it should include all 50 states and after a check it looks like the data for the following states is missing for the 2024 year {'IA', 'NM', 'KS', 'SD'}. 
+        other than that it shows the sates, their carbon emisions in pounds per megawatt hour and how much power they generate. 
+        I am also assuming that these missing states will be present in other years and just not this one but I will need to check this
+
+
+2. Part II: Refined Stage (Transformation & Validation)
+
+    Intended Use & Row Grain: Define the specific question, application, or consumer this refined dataset is designed for, and specify the exact row grain (what one row represents after refinement).
+        This data is intended to see how much power a state generates and how clean their generation is. This ratio is the the emisions intensity. 
+        Each row will still represent a states ranking on this table. This data also shows how much power a state consumes and generates
+    other parts are found in the code file 
+    
+
+3. Part III: Production Stage (Repeatability & Operational Thinking)
+
+In a short write-up (a final markdown cell, script docstring, or separate .txt file):
+
+    Repeatability & Automation: How would this script run if updated data arrived periodically (e.g., scheduled cron job, event trigger, automated batch)?
+        this script would simply run again as is currently stands it does not fetch new data, since it is freom sevral years old.
+        the data it gathers would only change if for some reason new data gets added to the 2018 year. 
+
+    Failure Points & Error Handling: Identify at least one realistic failure point (e.g., endpoint downtime, schema changes, unexpected nulls) and how the script should respond.
+        currently this script cannot handel processing multipule years, or rejection like downtime, it also will crash with key errors if anything gets renamed since it is all hardcoded and not pulled from the response. 
+        idealy it should be able to handel down time and other errors by simply taking that error and stating why the program is getting it. 
+    
+    Logging & Monitoring: What should be logged to confirm successful execution or alert an operator to failures?
+        the columns is what I think should be logged for successful execution, and missing ones should alert. Also every year after 2018 was mising data from at least one state.
+        and that should alert but I think idealy it should be able to countine its work and say which state is being excluded.
+        also cheking to see if the CVS was made is the best way to tell if the program ran.
+    
+    Delivery: How will downstream consumers or systems access the exported refined artifact?
+        well if it was posted then they could lookup and download it as a cvs. This is likely the simplest way to importint this.
+        However making my refined data into another api is a possibility yet not particularly useful
+
+4. Part IV: Holistic Workflow Summary
+
+Summarize the end-to-end journey of your data in 1–2 sentences per stage, following this pipeline:
+
+Source -> Raw Artifact -> Refinement -> Refined Artifact -> Production/Delivery
+
+here is the compleated overview:
+    Source:
+        Source is pulled from the EIA API from two end points. 
+        The end points pulled from are the summary/data/ and the source-disposition/data/ end points.
+        and we make sure to sleep that way we do not request to fast. 
+    Raw: 
+        the data gets sent to checkDataRaw for any errors, such as missing rows.
+        if there are no table missmatch's then the raw data gets sent to refinment. 
+        otherwise it will print an error and exit
+    Refinement:
+        The raw data is compressed from 2 separate pandas into one and then we walk through and rename any confusing coloumns. 
+        We also type cast the values we will be using, this way we dont have to deal with trying to do arithmetic on strings.
+    Refined Artifact: 
+        Once the Data is refined into a clean pandas dataframe we send it off to validation for a last check. 
+        This will check for any duplicate rows, and it will make sure there isnt any null rows as a just in case. 
+    Production/Delivery: 
+        the last step once everything has been checked it is exported into its respective CVS. 
+        This is the raw energy generation data, raw energy consumption data, and the refined data. 

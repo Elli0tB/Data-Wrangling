@@ -54,4 +54,4 @@ for location in all_location_data:
 
 all_locational_hourly_dataframe = pd.concat(all_locational_hourly_data, ignore_index=True)
 print("\nHourly data\n", "----Head of Data----\n", all_locational_hourly_dataframe.head(),'\n', "----Tail of Data----\n", all_locational_hourly_dataframe.tail() )
-all_locational_hourly_dataframe.to_csv('output.csv', index=False)
+all_locational_hourly_dataframe.to_csv('weather.csv', index=False)
