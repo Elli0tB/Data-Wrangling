@@ -16,4 +16,7 @@ Date (09/21/2026):
     A few thoughts that came to mind is energy grids and how expensive, powerful, or accesible energy is. 
     Also transportation specificyl public transport is something that could be intesting, trains and buses is where id want to start
     Maybe i should look into co2 emissions there is a bunch of power plants i found on gis maybe comparing them to cars? idk why that would matter tho so idk
-    
+
+
+Date (09/28/2026): 
+    check out the posted example for a good walk through for the final

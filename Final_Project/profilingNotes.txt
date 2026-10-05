@@ -1,0 +1,39 @@
+1. Project Question and Dataset Baseline
+
+For me my reserch question is what states are producing the most power and the cleanest, and to go even further which plants are preforming the best
+
+For the source you profile in depth, report:
+    for this ill jhust go over the largest and most intresting table 
+
+    Structure: size:410564x14, fields: [period, plantCode, plantName, fuel2002, fuel2002TypeDescription, fuelType, fuelTypeDescription, state, stateDescription, primeMover, generation, gross-generation, generation-units, gross-generation-units]
+    Grain: The rows are mostly self expalitory, they represent the output and data for one power plant however they can look like there are duplicates but the primeMover does seem to vary in these rows.
+    Scope: this mesures all of the us states, and some of the tables are also pulling the Total US output and the DC which isnt a state but is in side a state so it is beining looked at while other taeritorys like Purto Rico are excluded 
+    Temporality: for this we are looking at 2018 sinc eit has the most compleate data set however I dod intedn to shift over to 2026 and more recent years once i have a way to clean up and handle the empty or bad data
+    Accuracy limitations: this does seem to be reported and moniterd by the government so likely little limitation of the data. However misreporting, errors, or other common issues are still plausable.
+
+2. Individual-Value Profiling
+
+Select at least four fields that matter to your question or to a possible connection between sources. Summarize their meaning, your expectation, the check used, observed evidence, and the implication for your project. Across those fields, include all of the following:
+
+    Syntactic validity: I use the expected stat dict to see if any states were missing
+    Semantic interpretation: the discripter colums are the obvious ones these are given to help explain the meaning of rows and the units used.
+    Missingness: I currenty report if there are missing values and if a stat is missing it is simply excluded that way we can still evaluate the other states
+    Record relationships: The state id is used once for each state except in the case of the powerplant requests. With this it is very easy to relate which power plant belongs to which state and how much power it produces for it. 
+
+3. Set-Based Profiling
+looking at the check data raw function it looks for any missing rows and says if there were any it will also check for any empty rows that were just white space. if some are found then it will drop them and says so.
+we can compare how states generate power with coal, wind, and other power sources. 
+As for limitations, states seem inconsitatn on this reporting so we will have to drop them or look for time frames where they all reported such as 2018 
+
+
+4. Integration Risks and Project Decision
+    the State summary data gets one row per state per year
+    the State consumption data gets one row per state per year
+    the Plant data gets one row per plant, per fuel type, per month unless the primeMover differs
+
+Risks:
+    there is a posibility of Duplicate keys, since state+year isn't always unique so we will need even more colum validation for uniqueness
+    again there could be missing states they dont always report this information, or EIA dosent have it poseted
+
+With all this I still belive we can continue with the orgional project of reveiwing states powergwenration based off emisions, net generation, price, and other state data.
+However we will need extensive error handeling due to all the potental probloms could arise with imporper state documentation. 

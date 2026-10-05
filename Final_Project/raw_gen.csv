@@ -1,0 +1,52 @@
+period,stateID,stateDescription,average-retail-price,average-retail-price-rank,carbon-dioxide,carbon-dioxide-lbs,generation-elect-utils,net-generation,average-retail-price-units,average-retail-price-rank-units,carbon-dioxide-units,carbon-dioxide-lbs-units,generation-elect-utils-units,net-generation-units
+2018,AK,Alaska,19.36,2,3390,1194,5575087,6247359,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,AL,Alabama,9.63,28,56140,851,102665414,145057994,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,AR,Arkansas,7.78,50,38349,1241,59485255,67999352,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,AZ,Arizona,10.85,15,46757,919,98448117,111925144,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,CA,California,16.58,7,43649,491,75238779,195465638,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,CO,Colorado,10.02,22,34713,1379,42036600,55386279,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,CT,Connecticut,18.41,4,9591,535,108940,39453552,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,DC,District of Columbia,12.03,12,43,1188,,79331,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,DE,Delaware,10.55,18,3193,1126,36911,6240644,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,FL,Florida,10.32,20,105209,948,227284079,244252035,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,GA,Georgia,9.62,29,54803,933,109170814,129239371,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,HI,Hawaii,29.18,1,7197,1616,5296030,9796773,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,IA,Iowa,8.92,37,34253,1189,49513099,63380569,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,ID,Idaho,8.17,46,1766,214,11904458,18172120,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,IL,Illinois,9.6,30,72261,846,5449803,188003357,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,IN,Indiana,9.75,26,91554,1775,84829877,113459711,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,KS,Kansas,10.72,16,23748,1010,34517756,51710213,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,KY,Kentucky,8.52,43,66267,1850,77557021,78804497,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,LA,Louisiana,7.71,51,50770,1094,62152041,102128485,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,MA,Massachusetts,18.5,3,9976,808,586513,27172882,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,MD,Maryland,11.57,13,17839,896,3796556,43809648,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,ME,Maine,13.44,10,2202,429,19,11280700,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,MI,Michigan,11.4,14,61435,1167,81450131,115837095,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,MN,Minnesota,10.37,19,29805,1066,48577299,61517441,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,MO,Missouri,9.93,25,65623,1697,79780367,85095384,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,MS,Mississippi,9.24,35,26157,907,53310877,63473771,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,MT,Montana,8.84,40,15614,1218,12087481,28212831,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,NC,North Carolina,9.25,34,49642,814,117492427,134249497,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,ND,North Dakota,8.91,38,31282,1615,35946425,42615321,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,NE,Nebraska,9.02,36,25525,1519,31166766,36966216,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,NH,New Hampshire,17.01,6,2191,282,1416634,17087156,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,NJ,New Jersey,13.23,11,18912,554,125350,75033600,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,NM,New Mexico,9.35,33,18442,1242,21112259,32673682,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,NV,Nevada,8.67,42,14005,777,27481530,39640241,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,NY,New York,14.83,9,27936,464,35659945,132520501,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,OH,Ohio,9.94,24,78051,1342,19377024,127937288,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,OK,Oklahoma,8.09,48,34972,883,42825248,87181402,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,OR,Oregon,8.85,39,8800,302,47020281,64113560,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,PA,Pennsylvania,10.1,21,77031,787,150619,215385830,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,RI,Rhode Island,18.1,5,3348,879,44,8375257,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,SC,South Carolina,9.67,27,28874,639,94057567,99364088,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,SD,South Dakota,9.97,23,2921,509,10628359,12616396,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,TN,Tennessee,9.58,31,29303,790,78854061,81554917,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,TX,Texas,8.48,44,230076,1060,92964516,477352425,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,UT,Utah,8.21,45,28544,1595,34900905,39375424,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,VA,Virginia,9.48,32,33504,772,72378588,95509121,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,VT,Vermont,15.13,8,10,10,855518,2178915,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,WA,Washington,8,49,10661,201,101638299,116756729,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,WI,Wisconsin,10.58,17,41779,1394,51294228,65936803,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,WV,West Virginia,8.72,41,60203,1970,49799036,67249025,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours
+2018,WY,Wyoming,8.09,47,44014,2100,41954949,46112136,cents per kilowatthour,rank,thousand metric tons,pounds per megawatthour,megawatthours,megawatthours

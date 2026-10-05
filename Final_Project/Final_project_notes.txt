@@ -1,0 +1,9 @@
+Okay so there is another end point that is all the powerplants in side a state. that will be increadably usefull.
+So how will this change the table and what should the table be? 
+
+I think this is what it shoudl look like roughly and then we can have the notable table? that shows the best and wost plants and states? 
+ex. 
+State-ID, State-Name, emisions-intensity, Price-¢/kilowatthour,Total-Generation, Total-Consumption, Difference, Best prefroming plant, plant production, energy type of plant,   Total-Generation-Unit,Total-Consumption-Unit,Difference-Unit,Difference-Notes
+UT      Utah,           555,                55.55,              55555,              5555            5          ,       plant name       555.      , solar,                 Megawatthours,          Megawatthours,       Megawatthours 
+
+as is curently is i have to manulay delete the cvs so that the script dosent break this will need to be addresed eventually. 
