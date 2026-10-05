@@ -24,6 +24,28 @@ Select at least four fields that matter to your question or to a possible connec
 looking at the check data raw function it looks for any missing rows and says if there were any it will also check for any empty rows that were just white space. if some are found then it will drop them and says so.
 we can compare how states generate power with coal, wind, and other power sources. 
 As for limitations, states seem inconsitatn on this reporting so we will have to drop them or look for time frames where they all reported such as 2018 
+def checkDataRaw(data):
+    if data.empty:
+        empty_frame = pd.DataFrame()
+        return empty_frame
+    
+    #Check for empty rows
+    print("---Checking for missing values---" )
+    rows_missing_some_data =data[data.isna().any(axis=1)]
+    print(f"---{len(rows_missing_some_data)} rows were missing at least 1 coloums data---")
+
+    #check for empty rows and see if whitespace was hiding anything
+    print("---Cheking for empty values with whitespace---")
+    df_cleaned = data.replace(r'^\s*$', np.nan, regex=True)
+    whitespace_empty_rows = data[df_cleaned.isna().all(axis=1)]
+    print(f"---{len(whitespace_empty_rows)} rows were missing at least 1 coloums data and was hidden with white space---")
+
+    #clear empty rows
+    print("---Clearing empty rows---")
+    cleard_data =data.dropna(how='all')
+    print("---Empty rows removed---")
+    return cleard_data
+    
 
 
 4. Integration Risks and Project Decision
