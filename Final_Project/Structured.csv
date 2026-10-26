@@ -1,0 +1,52 @@
+Year,State-ID,Electricity Price (¢/kWh),Emisions-Intensity,Total-Generation (MWh),Total-Consumption (MWh),Diffrence,Best Plant,Best-Plant-Generation,Best-Plant-Type,Worst-Plant,Worst-Plant-Generation,Worst-Plant-Type
+2018-06,AK,19.36,1194,6247359,6247989,-630,Southcentral Power Project,81344.0,Total,Beluga,-341.0,Total
+2018-02,AL,9.63,851,145057994,145057994,0,Browns Ferry,2619704.0,Total,Charles R Lowman,-3208.0,Total
+2018-12,AR,7.78,1241,67999352,67999352,0,Arkansas Nuclear One,1374056.0,Total,Magnet Cove,-1340.0,Total
+2018-10,AZ,10.85,919,111925144,111994787,-69643,Palo Verde,2984031.0,Total,Waddell,-15415.0,Total
+2018-12,CA,16.58,491,195465638,201797027,-6331389,Diablo Canyon,1686430.0,Total,W R Gianelli,-109020.0,Total
+2018-01,CO,10.02,1379,55386279,55387105,-826,Comanche (CO),912129.0,Total,Cabin Creek,-15853.0,Total
+2018-03,CT,18.41,535,39453552,39983910,-530358,Millstone,1562198.0,Total,Bridgeport Station,-2794.0,Total
+2018-05,DC,12.03,1188,79331,82296,-2965,DC Water CHP,5776.0,Total,US GSA Heating and Transmission,-903.0,Total
+2018-03,DE,10.55,1126,6240644,6243717,-3073,Hay Road,347421.0,Total,Indian River Generating Station,-3285.0,Total
+2018-03,FL,10.32,948,244252035,244252035,0,West County Energy Center,2088277.0,Total,Crist,-3270.0,Total
+2018-07,GA,9.62,933,129239371,129239371,0,Vogtle,1778425.0,Total,Rocky Mountain Hydroelectric Plant,-54020.0,Total
+2018-08,HI,29.18,1616,9796773,9796773,0,Kahe,229500.0,Total,Campbell Industrial Park,-344.0,Total
+2018-10,IA,8.92,1189,63380569,63380569,0,Walter Scott Jr Energy Center,1022048.0,Total,Lansing,-1458.0,Total
+2018-05,ID,8.17,214,18172120,18206086,-33966,Brownlee,237874.21,Total,Langley Gulch Power Plant,-390.0,Total
+2018-08,IL,9.6,846,188003357,188027642,-24285,Braidwood Generation Station,1790375.0,Total,Joliet 9,-7643.0,Total
+2018-05,IN,9.75,1775,113459711,113532779,-73068,Gibson,1812617.0,Total,Bailly,-4294.0,Total
+2018-04,KS,10.72,1010,51710213,51710213,0,Jeffrey Energy Center,998240.0,Total,Wolf Creek Generating Station,-7752.0,Total
+2018-01,KY,8.52,1850,78804497,78810465,-5968,Paradise,1224538.0,Total,Paradise,-16832.36,Coal
+2018-11,LA,7.71,1094,102128485,102128485,0,Nine Mile Point,1140414.0,Total,Mosaic Phosphates Uncle Sam,-5330.0,Other
+2018-07,MA,18.5,808,27172882,28153151,-980269,Mystic Generating Station,804251.0,Total,Northfield Mountain,-32239.0,Total
+2018-12,MD,11.57,896,43809648,43825858,-16210,Calvert Cliffs Nuclear Power Plant,1352230.0,Total,Chalk Point LLC,-9030.0,Total
+2018-07,ME,13.44,429,11280700,15629460,-4348760,Westbrook Energy Center Power Plant,219492.0,Total,William F Wyman,-241.0,Other
+2018-08,MI,11.4,1167,115837095,122377144,-6540049,Donald C Cook,1719871.0,Total,Ludington,-116952.0,Total
+2018-10,MN,10.37,1066,61517441,65718064,-4200623,Sherburne County,1338972.0,Total,High Bridge,-37100.0,Total
+2018-06,MO,9.93,1697,85095384,85095384,0,Labadie,1539053.0,Total,Taum Sauk,-22152.0,Total
+2018-06,MS,9.24,907,63473771,63473771,0,Grand Gulf,1051752.0,Total,Grand Gulf,-6427.0,Total
+2018-04,MT,8.84,1218,28212831,28268428,-55597,Colstrip,1408596.0,Total,Lewis & Clark,-337.0,Total
+2018-11,NC,9.25,814,134249497,134251000,-1503,McGuire,1779429.0,Total,G G Allen,-5040.0,Total
+2018-03,ND,8.91,1615,42615321,43778973,-1163652,Coal Creek,820152.0,Total,R M Heskett,-109.0,Natural Gas
+2018-07,NE,9.02,1519,36966216,36978442,-12226,Gerald Gentleman,955506.0,Total,Nebraska City # 1,-140.72,Total
+2018-12,NH,17.01,282,17087156,17290336,-203180,Seabrook,931139.0,Total,Schiller,0.0,Distillate Fuel Oil
+2018-07,NJ,13.23,554,75033600,75056481,-22881,PSEG Salem Generating Station,1744811.0,Nuclear,Yards Creek,-21668.0,Total
+2018-02,NM,9.35,1242,32673682,32677725,-4043,Four Corners,999451.0,Total,Four Corners,-9057.0,Total
+2018-01,NV,8.67,777,39640241,39686561,-46320,Chuck Lenzie Generating Station,616620.0,Total,North Valmy,-3662.0,Total
+2018-08,NY,14.83,464,132520501,148213143,-15692642,Robert Moses Niagara,1540588.0,Total,Lewiston Niagara,-28847.0,Total
+2018-02,OH,9.94,1342,127937288,128019549,-82261,"Gavin Power, LLC",1763234.0,Total,Avon Lake,-3215.0,Total
+2018-10,OK,8.09,883,87181402,87181402,0,Redbud Power Plant,797111.0,Total,Salina,-16154.0,Total
+2018-07,OR,8.85,302,64113560,64657755,-544195,John Day,1162464.0,Total,Salem Smart Power Center,-49.0,Total
+2018-08,PA,10.1,787,215385830,215442173,-56343,Peach Bottom,2002697.0,Total,Muddy Run,-43487.0,Total
+2018-12,RI,18.1,879,8375257,8514741,-139484,Rhode Island State Energy Center,367572.0,Total,Manchester Street,0.0,Distillate Fuel Oil
+2018-07,SC,9.67,639,99364088,99364088,0,Oconee,1946748.0,Total,Bad Creek,-67277.0,Total
+2018-01,SD,9.97,509,12616396,12616396,0,Oahe,405523.55,Total,Ben French,-147.0,Total
+2018-08,TN,9.58,790,81554917,81554917,0,Watts Bar Nuclear Plant,1782004.0,Total,Raccoon Mountain,-77004.0,Total
+2018-05,TX,8.48,1060,477352425,483184603,-5832178,South Texas Project,1990840.0,Total,Port Arthur Steam Energy,-1645.0,Total
+2018-03,UT,8.21,1595,39375424,39415019,-39595,Intermountain Power Project,1096666.0,Total,Gadsby,-1188.0,Natural Gas
+2018-08,VA,9.48,772,95509121,95539613,-30492,North Anna,1492806.0,Total,Bath County,-134846.0,Total
+2018-12,VT,15.13,10,2178915,11905277,-9726362,J C McNeil,36968.0,Total,GMP Solar - Panton,-45.04,Other
+2018-11,WA,8,201,116756729,118192059,-1435330,Grand Coulee,2680266.0,Hydroelectric Conventional,Chehalis Generating Facility,-1471.0,Total
+2018-04,WI,10.58,1394,65936803,65936803,0,Point Beach Nuclear Plant,900095.0,Nuclear,Manitowoc,-566.0,Total
+2018-01,WV,8.72,1970,67249025,67257809,-8784,John E Amos,1633109.0,Total,Laurel Mountain,-816.0,Other
+2018-12,WY,8.09,2100,46112136,46113573,-1437,Jim Bridger,1264693.0,Total,Wyodak,0.0,Distillate Fuel Oil

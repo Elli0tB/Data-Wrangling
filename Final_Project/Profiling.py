@@ -22,33 +22,93 @@ def fetchRawData(URL, params):
     raw_data_frame = pd.DataFrame(response.get("data"))
     return raw_data_frame
 
-"""   
-def refineData(raw_data_gen, raw_data_com):
-    if isinstance(raw_data_gen, pd.DataFrame):
-        if isinstance(raw_data_com, pd.DataFrame):
-            raw_data_com = raw_data_com.rename(columns={"state": "stateID"})
-            merged = pd.merge(raw_data_gen, raw_data_com, on="stateID", suffixes=("_gen", "_com"), how="inner") 
-            merged.dropna(axis=0, inplace= True)
-            refined_data = []
-            for index, row in merged.iterrows():
-                refined_row = {"Year": row['period_gen'],
-                "State-ID" :row['stateID'], 
-                "State-Name": row['stateDescription_gen'], 
-                "emisions-intensity": float(row['carbon-dioxide-lbs']), 
-                "Price-¢/kilowatthour": float(row['average-retail-price']), 
-                "Total-Generation": float(row['net-generation']), 
-                "Total-Consumption": float(row['total-disposition']), 
-                "Difference": float(row['total-disposition']) - float(row['net-generation']), 
-                "Total-Generation-Unit": "Megawatthours", 
-                "Total-Consumption-Unit": "Megawatthours", 
-                "Difference-Unit": "Megawatthours",
-                "Difference-Notes": "Positive numbers are a deficit, negative numbers are a surplus"}
-                refined_data.append(refined_row) 
-            return pd.DataFrame(refined_data)
-    print("ERROR: Excpected pandas dataframe recived flase value, check HTTPS status code above!")
-    print("Quiting program, ERROR must be resolved")
+def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
+    if isinstance(raw_data_state , pd.DataFrame) == False:
+        print("ERROR: raw_state_data was not a pd dataframe")
+        print("Quiting program, ERROR must be resolved")
+        sys.exit()
+    elif isinstance(raw_data_com , pd.DataFrame) == False:
+        print("ERROR: raw_consumption_data was not a pd dataframe")
+        print("Quiting program, ERROR must be resolved")
+        sys.exit()
+    elif isinstance(raw_data_pwr_plnt , pd.DataFrame) == False:
+        print("ERROR: raw_power_plant_data was not a pd dataframe")
+        print("Quiting program, ERROR must be resolved")
+        sys.exit()
+    else:
+        raw_data_state = raw_data_state.rename(columns={"stateID": "state_id", "period": "year"})
+        raw_data_com = raw_data_com.rename(columns={"state": "state_id","period": "year"})
+        raw_data_pwr_plnt = raw_data_pwr_plnt.rename(columns={"state": "state_id","period": "year"})
+
+        raw_data_state = raw_data_state.drop(columns=['stateDescription',
+                                                    'average-retail-price-rank',
+                                                    'carbon-dioxide',
+                                                    'generation-elect-utils',
+                                                    'average-retail-price-units',
+                                                    'average-retail-price-rank-units',
+                                                    'carbon-dioxide-units',
+                                                    'carbon-dioxide-lbs-units',
+                                                    'generation-elect-utils-units',
+                                                    'net-generation-units'
+                                                    ]) 
+        #this is the end result table year,stateID,average-retail-price,carbon-dioxide-lbs,net-generation,
+
+        
+        raw_data_com = raw_data_com.drop(columns=['stateDescription',
+                                                  'total-disposition-units'
+                                                ]) 
+        #this is the end result table year,state,stateDescription,total-disposition
+    
+        raw_data_pwr_plnt = raw_data_pwr_plnt.drop(columns=['plantCode',
+                              'fuel2002',
+                              'fuel2002TypeDescription',
+                              'primeMover',
+                              'stateDescription',
+                              'gross-generation',
+                              'gross-generation-units'
+                              ]) 
+        #this is the end result table period,plantName,fuelType,fuelTypeDescription,state,generation,generation-units,
+
+        
+        # Step 1: best and worst plant per state
+        best = (raw_data_pwr_plnt.loc[raw_data_pwr_plnt.groupby('state_id')['generation'].idxmax(), ['year','plantName','fuelType','fuelTypeDescription','state_id','generation','generation-units']]
+           .rename(columns={'plantName': 'best_plant', 'generation': 'best_generation', 'fuelTypeDescription'   : 'fuelTypeDescription_best',}))
+
+        worst = (raw_data_pwr_plnt.loc[raw_data_pwr_plnt.groupby('state_id')['generation'].idxmin(), ['year','plantName','fuelType','fuelTypeDescription','state_id','generation','generation-units']]
+            .rename(columns={'plantName': 'worst_plant', 'generation': 'worst_generation', 'fuelTypeDescription'   : 'fuelTypeDescription_worst'}))
+
+        # Step 2: merge everything on state
+        final = (raw_data_state.merge(raw_data_com, on=['state_id', 'year'], how='left')
+            .merge(best, on='state_id', how='left')
+            .merge(worst, on='state_id', how='left'))
+        
+        column_map = {
+            # old name in `final`       : new name in output
+            "year"                      : 'Year',
+            'state_id'                  : 'State-ID',
+            'average-retail-price'      : 'Electricity Price (¢/kWh)',
+            'carbon-dioxide-lbs'        : 'Emisions-Intensity',
+            'net-generation'            : 'Total-Generation (MWh)',
+            'total-disposition'         : 'Total-Consumption (MWh)',
+            'best_plant'                : 'Best Plant',
+            'best_generation'           : 'Best-Plant-Generation',
+            'fuelTypeDescription_best'  : 'Best-Plant-Type',
+            'worst_plant'               : 'Worst-Plant',
+            'worst_generation'          : 'Worst-Plant-Generation',
+            'fuelTypeDescription_worst' : 'Worst-Plant-Type',
+        }
+    
+        refined = final[list(column_map)].rename(columns=column_map)
+        position = refined.columns.get_loc('Total-Consumption (MWh)') + 1   # position right after this column
+        refined.insert(position, 'Diffrence', refined['Total-Generation (MWh)'].astype(int) - refined['Total-Consumption (MWh)'].astype(int))
+
+        refined = refined.round(2).sort_values('State-ID').reset_index(drop=True)
+        refined.to_csv('Structured.csv', index=False)
+        print(refined)
+        print(len(refined))
+        return refined
     sys.exit()
-"""
+
 
 def checkDataRaw(data):
     if data.empty:
@@ -72,7 +132,6 @@ def checkDataRaw(data):
     print("---Empty rows removed---")
     return cleard_data
     
-
 def CheckForMissingStates(data):
     if data.empty:
         empty_frame = pd.DataFrame()
@@ -106,7 +165,6 @@ def CheckForMissingStates(data):
     else :
         print("---State check passed---")
 
-
 """
 def checkDataClean(refined_data):
     refined_data.dropna(axis=0, inplace= True)
@@ -119,7 +177,6 @@ def checkDataClean(refined_data):
         print("Quiting program, ERROR must be resolved")
         sys.exit()
 """
-
 
 def requestStateData(token):
     url_gen = "https://api.eia.gov/v2/electricity/state-electricity-profiles/summary/data/"
@@ -138,7 +195,7 @@ def requestStateData(token):
     raw_data_generation = fetchRawData(url_gen,params_gen)
     raw_gen = checkDataRaw(raw_data_generation)
     raw_gen.to_csv('raw_gen.csv', index=False)
-    #return raw_data_generation
+    return raw_data_generation
     
 def requestStateConsumptionData(token):
     url_com = "https://api.eia.gov/v2/electricity/state-electricity-profiles/source-disposition/data/"
@@ -158,9 +215,7 @@ def requestStateConsumptionData(token):
     raw_con = checkDataRaw(raw_data_consumption)    
     CheckForMissingStates(raw_con)
     raw_con.to_csv('raw_con.csv', index=False)
-    
-    
-    #return raw_data_consumption
+    return raw_data_consumption
 
 def requestPlantGenerationData(token):
     total_rows = 410564
@@ -203,12 +258,21 @@ def requestPlantGenerationData(token):
 def Main():
     load_dotenv()
     token = os.getenv("API_TOKEN")
-    raw_data_generation = requestStateData(token)
+
+    # clear the old file on start up 
+    file_path = "raw_data_power_plants.csv"
+    if os.path.isfile(file_path):
+        os.remove(file_path)
+        print("File deleted successfully.")
+    else:
+        print("The file does not exist.")
+
+    raw_data_state = requestStateData(token)
     raw_data_consumption = requestStateConsumptionData(token)
     raw_data_power_plants = requestPlantGenerationData(token)
     # make all the data fetch functions check their own data!
     # then have it send it to main for procesing
-   
+    refined_data = refineData(raw_data_state, raw_data_consumption, raw_data_power_plants)
     
     
     
@@ -216,6 +280,5 @@ def Main():
     # print(refined_data)
     # checkDataClean(refined_data)
     
-
 
 Main()

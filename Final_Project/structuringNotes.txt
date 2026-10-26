@@ -1,0 +1,60 @@
+1. Define the intended structure
+    we shoud have each year's state data which sould be emissins, price, total genreation, consumption,  
+        the Difference in gen and con, Best prefroming plant, plant production, energy type of plant, and then the same but for worst 
+
+    here is what I think we should start with the table looking like. However I belive I could get some more usefull information out of this.
+    Year, State-ID, Electricity Price(¢/kWh), Emisions-Intensity, Total-Generation(MWh), Total-Consumption(MWh), 
+        Best Plant, Best-Plant-Generation, Best-Plant-Type, Worst-Plant, Worst-Plant-Generation, Worst-Plant-Type
+
+    with this each row is one year's worth of data for each state. Currently I am still assuming that we will be looking at one year at a time
+    this I would like to change to where we could look at multipule years at a time
+
+2. Perform a useful transformation
+    there is a lot of code I have that does changes the best and largest is this column_map.
+    this lets me take the table i have merged and restucter it into a table that is more intuative and holds the most useful information
+
+    column_map = {
+            # old name in `final`       : new name in output
+            "year"                      : 'Year',
+            'state_id'                  : 'State-ID',
+            'average-retail-price'      : 'Electricity Price (¢/kWh)',
+            'carbon-dioxide-lbs'        : 'Emisions-Intensity',
+            'net-generation'            : 'Total-Generation (MWh)',
+            'total-disposition'         : 'Total-Consumption (MWh)',
+            'best_plant'                : 'Best Plant',
+            'best_generation'           : 'Best-Plant-Generation',
+            'fuelTypeDescription_best'  : 'Best-Plant-Type',
+            'worst_plant'               : 'Worst-Plant',
+            'worst_generation'          : 'Worst-Plant-Generation',
+            'fuelTypeDescription_worst' : 'Worst-Plant-Type',
+        }
+    
+        refined = final[list(column_map)].rename(columns=column_map)
+        position = refined.columns.get_loc('Total-Consumption (MWh)') + 1   # position right after this column
+        refined.insert(position, 'Diffrence', refined['Total-Generation (MWh)'].astype(int) - refined['Total-Consumption (MWh)'].astype(int))
+
+        refined = refined.round(2).sort_values('State-ID').reset_index(drop=True)
+        refined.to_csv('Structured.csv', index=False)
+       
+3. Validate the result
+    this is a very simple check but one that will tell me if i missed something. 
+    this is because we have 50 states exactly, however we will have 52 rows for this table due to the column names and we include DC 
+    print(refined)
+    print(len(refined))
+
+4. Interpretation
+    As for my next steps I am a little unsure where to go next. This is due to me feeling mostly complete with where this is at now for enriching. 
+    However I think it would be possible if not fesable to pull more data so give more context. 
+    I would also like to look into resolving some of the restricitions and issues I am having.
+    Number one is being able to scan more than one year and handle missing data. 
+    Slightly simpler would be fixing the tables the plant type is wrong, this is due to how EIA Structured their table and have a total catigory
+    this is becasue the split the plants into subsections on occasion. Why this is the case I am not quite sure, but I would like to start there.
+
+    This is answering my question mostly since i know the general stats on how a state preformes in the powerplants.
+    however someting i saw while working on this is negative power generation, thats just power consumption for a powerplant? 
+    aperently this is actually suprisingly common due to plants that are on standby waiting to start up when another plant goes down.
+    To do this effectivly they need to keep their basic systems running, like fans, cooling, and other systems. 
+    so looking into removing those wouldnt be a bad next step as well
+        
+
+
