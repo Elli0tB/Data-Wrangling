@@ -52,7 +52,6 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
                                                     'net-generation-units'
                                                     ]) 
         #this is the end result table year,stateID,average-retail-price,carbon-dioxide-lbs,net-generation,
-
         
         raw_data_com = raw_data_com.drop(columns=['stateDescription',
                                                   'total-disposition-units'
@@ -68,7 +67,7 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
                               'gross-generation-units'
                               ]) 
         #this is the end result table period,plantName,fuelType,fuelTypeDescription,state,generation,generation-units,
-
+        #df = df[df['col_name'] != 'value'] this is a good way to drop  rows based off a val in a col
         
         # Step 1: best and worst plant per state
         best = (raw_data_pwr_plnt.loc[raw_data_pwr_plnt.groupby('state_id')['generation'].idxmax(), ['year','plantName','fuelType','fuelTypeDescription','state_id','generation','generation-units']]
@@ -107,7 +106,6 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
         print(refined)
         print(len(refined))
         return refined
-    sys.exit()
 
 
 def checkDataRaw(data):
@@ -218,7 +216,7 @@ def requestStateConsumptionData(token):
     return raw_data_consumption
 
 def requestPlantGenerationData(token):
-    total_rows = 410564
+    file_path = "raw_data_power_plants.csv"
     more_rows = True
     url_plant = "https://api.eia.gov/v2/electricity/facility-fuel/data/"
     params_plant = {
@@ -226,7 +224,7 @@ def requestPlantGenerationData(token):
         "frequency": "monthly",
         "data[]": ["generation", "gross-generation" ],
         "facets[state][]": ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "TN", "TX", "UT", "VA", "VT", "WA", "WI","WV", "WY", "IA", "KS", "NM", "SD"],
-        "facets[fuelType][]": ["ALL", "COL", "DFO", "GEO", "HPS", "HYC", "MLG", "NG", "NUC", "OOG", "ORW", "OTH", "PC", "RFO","SUN", "WND", "WOC", "WOO", "WWW" ],
+        "facets[fuelType][]": ["COL", "DFO", "GEO", "HPS", "HYC", "MLG", "NG", "NUC", "OOG", "ORW", "OTH", "PC", "RFO","SUN", "WND", "WOC", "WOO", "WWW" ],
         "start": "2018-01",
         "end": "2018-12",
         "sort[0][column]": "state",
@@ -237,19 +235,17 @@ def requestPlantGenerationData(token):
 
     while more_rows == True:
         raw_data_power_plants = fetchRawData(url_plant,params_plant)
-        non_empty_data = checkDataRaw(raw_data_power_plants)
-        if non_empty_data.empty:
+        checked_data = checkDataRaw(raw_data_power_plants)
+        if checked_data.empty:
             more_rows = False
             break
-        file_path = "raw_data_power_plants.csv"
-        # Check if it is a regular file
+        # Check if it needs to append to it or create the file
         if os.path.isfile(file_path):
-            non_empty_data.to_csv('raw_data_power_plants.csv', mode='a', index=False, header=False)
+            checked_data.to_csv('raw_data_power_plants.csv', mode='a', index=False, header=False)
         else: 
-            non_empty_data.to_csv('raw_data_power_plants.csv', index=False)        
+            checked_data.to_csv('raw_data_power_plants.csv', index=False)     
+        # increment and do it again   
         params_plant["offset"] += 5000
-        if params_plant["offset"] >= total_rows:
-            more_rows = False
     print("---Fetched all rows for request---")
     data_frame = pd.read_csv('raw_data_power_plants.csv')
     CheckForMissingStates(data_frame)
@@ -280,5 +276,4 @@ def Main():
     # print(refined_data)
     # checkDataClean(refined_data)
     
-
 Main()
