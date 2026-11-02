@@ -1,0 +1,83 @@
+1. Design the enrichment
+    So for this little has changed in the structer, we already have the diffrance which helps enrich the set already. 
+    This time we have added a new wated power column for that sums all the plants that are in a deficit, per state. 
+
+2. Connect sources and validate the records
+    the dimensions are now 51x14, since we added one column. 
+    before:
+       Year State-ID Electricity Price (¢/kWh)  ... Worst-Plant-Generation              Worst-Plant-Type 
+0   2018-06       AK                     19.36  ...                -341.00                   Natural Gas
+1   2018-04       AL                      9.63  ...               -2701.55                          Coal
+2   2018-12       AR                      7.78  ...               -1340.00                   Natural Gas 
+3   2018-10       AZ                     10.85  ...              -15415.00  Hydroelectric Pumped Storage 
+4   2018-12       CA                     16.58  ...             -109020.00  Hydroelectric Pumped Storage 
+
+
+    after:
+       Year State-ID Electricity Price (¢/kWh)  ... Worst-Plant-Generation              Worst-Plant-Type Wasted-Power
+0   2018-06       AK                     19.36  ...                -341.00                   Natural Gas     -2064.19
+1   2018-04       AL                      9.63  ...               -2701.55                          Coal     -6014.42
+2   2018-12       AR                      7.78  ...               -1340.00                   Natural Gas     -3810.00
+3   2018-10       AZ                     10.85  ...              -15415.00  Hydroelectric Pumped Storage    -32110.02
+4   2018-12       CA                     16.58  ...             -109020.00  Hydroelectric Pumped Storage   -341961.92
+
+    for this we now add the wasted power in the merge thankfull due to the quality of the api eveything but price is on megawatt hours just like before. 
+    Due to the clean up from before we know that the row counts have been saved across all of the dataframs, so this merge wont have any undefined behavior.
+
+        final = (raw_data_state.merge(raw_data_com, on=['state_id', 'year'], how='left')
+            .merge(best, on='state_id', how='left')
+            .merge(worst, on='state_id', how='left')
+ --->       .merge(wasted, on=['state_id', 'year'], how='left'))
+        final['wasted_power'] = final['wasted_power'].fillna(0)
+        
+        column_map = {
+            # old name in `final`       : new name in output
+            "year"                      : 'Year',
+            'state_id'                  : 'State-ID',
+            'average-retail-price'      : 'Electricity Price (¢/kWh)',
+            'carbon-dioxide-lbs'        : 'Emisions-Intensity',
+            'net-generation'            : 'Total-Generation (MWh)',
+            'total-disposition'         : 'Total-Consumption (MWh)',
+            'best_plant'                : 'Best Plant',
+            'best_generation'           : 'Best-Plant-Generation',
+            'fuelTypeDescription_best'  : 'Best-Plant-Type',
+            'worst_plant'               : 'Worst-Plant',
+            'worst_generation'          : 'Worst-Plant-Generation',
+            'fuelTypeDescription_worst' : 'Worst-Plant-Type',
+   --->     'wasted_power'              : 'Wasted-Power'
+        }
+    
+        refined = final[list(column_map)].rename(columns=column_map)
+        position = refined.columns.get_loc('Total-Consumption (MWh)') + 1   # position right after this column
+        refined.insert(position, 'Diffrence', refined['Total-Generation (MWh)'].astype(int) - refined['Total-Consumption (MWh)'].astype(int))
+
+        refined = refined.round(2).sort_values('State-ID').reset_index(drop=True)
+        refined.to_csv('Structured.csv', index=False)
+
+3. Derive and check a useful value
+    this is pretty simple for how we get the wasted power.
+    First we just check are we less than 0? if so we have wasted power.
+    we take that sum up all of the plants in the state that meet this critarea, and rename that to wasted power. 
+        raw_data_pwr_plnt['generation'] = pd.to_numeric(raw_data_pwr_plnt['generation'], errors='coerce')
+        wasted = (raw_data_pwr_plnt[raw_data_pwr_plnt['generation'] < 0]
+          .groupby(['state_id', 'year'], as_index=False)['generation']
+          .sum()
+          .rename(columns={'generation': 'wasted_power'}))
+    
+    we have already confirmed with this table we only have the 50 states and dc. 
+    incase we dont find a state with wasted power we will use this code thats down at the merge 
+   
+    final['wasted_power'] = final['wasted_power'].fillna(0) this will resolve and missing data to a 0.
+    While this may not be the best approache since it donste resolve what the data could be it will let us ignore the data without breaking anything
+    again we are in megawatt hours and this is simple addition with negative numbers for the wasted power. 
+
+4. Interpret and hand off
+This helps us see how much power goes to waste with plants sitting idle. While this does let them serve as rapid backups, some states waster power is staggering. 
+Along side this we also now create ranking tables to give us some quick information on the best and worst prefroming states. 
+
+Moving forward I would like to create my own net generation column to see if it matces what the api says and if not then we could have a unaccounted for column.
+Again still linking into clean up with being able to handle missing states beiung high prioraty but due to the changes that will need it will liekly be one of the final updates to this project.
+Also I would like to look into a way to help keep some of the metadata intact without haveing a huge table while perhaps just one column tat says the units? 
+or maybe a key that will be a sepreat table? 
+
+Regardless I would like to look into a cleaning function that would be able to help handle the event of a missing state. 

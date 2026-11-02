@@ -22,6 +22,28 @@ def fetchRawData(URL, params):
     raw_data_frame = pd.DataFrame(response.get("data"))
     return raw_data_frame
 
+def checkDataRaw(data):
+    if data.empty:
+        empty_frame = pd.DataFrame()
+        return empty_frame
+    
+    #Check for empty rows
+    print("---Checking for missing values---" )
+    rows_missing_some_data =data[data.isna().any(axis=1)]
+    print(f"---{len(rows_missing_some_data)} rows were missing at least 1 coloums data---")
+
+    #check for empty rows and see if whitespace was hiding anything
+    print("---Cheking for empty values with whitespace---")
+    df_cleaned = data.replace(r'^\s*$', np.nan, regex=True)
+    whitespace_empty_rows = data[df_cleaned.isna().all(axis=1)]
+    print(f"---{len(whitespace_empty_rows)} rows were missing at least 1 coloums data and was hidden with white space---")
+
+    #clear empty rows
+    print("---Clearing empty rows---")
+    cleard_data =data.dropna(how='all')
+    print("---Empty rows removed---")
+    return cleard_data
+    
 def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
     if isinstance(raw_data_state , pd.DataFrame) == False:
         print("ERROR: raw_state_data was not a pd dataframe")
@@ -68,6 +90,13 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
                               ]) 
         #this is the end result table period,plantName,fuelType,fuelTypeDescription,state,generation,generation-units,
         #df = df[df['col_name'] != 'value'] this is a good way to drop  rows based off a val in a col
+
+        # lets get a hold of the wasted power 
+        raw_data_pwr_plnt['generation'] = pd.to_numeric(raw_data_pwr_plnt['generation'], errors='coerce')
+        wasted = (raw_data_pwr_plnt[raw_data_pwr_plnt['generation'] < 0]
+          .groupby(['state_id', 'year'], as_index=False)['generation']
+          .sum()
+          .rename(columns={'generation': 'wasted_power'}))
         
         # Step 1: best and worst plant per state
         best = (raw_data_pwr_plnt.loc[raw_data_pwr_plnt.groupby('state_id')['generation'].idxmax(), ['year','plantName','fuelType','fuelTypeDescription','state_id','generation','generation-units']]
@@ -79,7 +108,9 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
         # Step 2: merge everything on state
         final = (raw_data_state.merge(raw_data_com, on=['state_id', 'year'], how='left')
             .merge(best, on='state_id', how='left')
-            .merge(worst, on='state_id', how='left'))
+            .merge(worst, on='state_id', how='left')
+            .merge(wasted, on=['state_id', 'year'], how='left'))
+        final['wasted_power'] = final['wasted_power'].fillna(0)
         
         column_map = {
             # old name in `final`       : new name in output
@@ -95,6 +126,7 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
             'worst_plant'               : 'Worst-Plant',
             'worst_generation'          : 'Worst-Plant-Generation',
             'fuelTypeDescription_worst' : 'Worst-Plant-Type',
+            'wasted_power'              : 'Wasted-Power'
         }
     
         refined = final[list(column_map)].rename(columns=column_map)
@@ -105,31 +137,59 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
         refined.to_csv('Structured.csv', index=False)
         print(refined)
         print(len(refined))
-        return refined
+        return refined 
 
-
-def checkDataRaw(data):
-    if data.empty:
-        empty_frame = pd.DataFrame()
-        return empty_frame
+def rankingData(refined_data):
+    # what is the goal? 
+    # take the refined data and make intresint tables like a ranking of the best power plants/states in order
+    # lets make one for best plant, worst plant, worst emisions, highest difference, and maybe more? 
     
-    #Check for empty rows
-    print("---Checking for missing values---" )
-    rows_missing_some_data =data[data.isna().any(axis=1)]
-    print(f"---{len(rows_missing_some_data)} rows were missing at least 1 coloums data---")
+    # Best Plant Data
+    Best_plant_ranking_data = refined_data.sort_values(by= 'Best-Plant-Generation', ascending=False)
+    print("----- BEST PLANT DATA RANKED -----")
+    print(Best_plant_ranking_data.head())
+    time.sleep(5)
+    print("----- MOVING ON TO NEXT RANKING -----")
+    Best_plant_ranking_data.to_csv('csv_holder/Best_Plant_Ranking_Data.csv', index= False)
 
-    #check for empty rows and see if whitespace was hiding anything
-    print("---Cheking for empty values with whitespace---")
-    df_cleaned = data.replace(r'^\s*$', np.nan, regex=True)
-    whitespace_empty_rows = data[df_cleaned.isna().all(axis=1)]
-    print(f"---{len(whitespace_empty_rows)} rows were missing at least 1 coloums data and was hidden with white space---")
+    #Worst Plant data
+    Worst_plant_ranking_data = refined_data.sort_values(by= 'Worst-Plant-Generation', ascending=True)
+    print("----- WORST PLANT DATA RANKED -----")
+    print(Worst_plant_ranking_data.head())
+    time.sleep(5)
+    print("----- MOVING ON TO NEXT RANKING -----")
+    Worst_plant_ranking_data.to_csv('csv_holder/Worst_Plant_Ranking_Data.csv', index= False)
 
-    #clear empty rows
-    print("---Clearing empty rows---")
-    cleard_data =data.dropna(how='all')
-    print("---Empty rows removed---")
-    return cleard_data
-    
+    #Worst emissions data
+    Worst_emissions_ranking_data = refined_data.sort_values(by= 'Emisions-Intensity', ascending=False)
+    print("----- WORST EMISSIONS DATA RANKED -----")
+    print(Worst_emissions_ranking_data.head())
+    time.sleep(5)
+    print("----- MOVING ON TO NEXT RANKING -----")
+    Worst_emissions_ranking_data.to_csv('csv_holder/Emissions_Ranking_Data.csv', index= False)
+
+    #Highest difference data
+    Worst_difference_ranking_data = refined_data.sort_values(by= 'Diffrence', ascending=False)
+    print("----- HIGHEST DIFFERENCE DATA RANKED -----")
+    print(Worst_difference_ranking_data.head())
+    time.sleep(5)
+    print("----- MOVING ON TO NEXT RANKING -----")
+    Worst_difference_ranking_data.to_csv('csv_holder/Difference_Ranking_Data.csv', index= False)
+
+    #Best State Overall
+    overall = refined_data.copy()
+    overall["Overall-Score"] = (
+        overall["Best-Plant-Generation"].rank(ascending=False)
+        + overall["Emisions-Intensity"].rank(ascending=True)
+        + overall["Diffrence"].rank(ascending=False)
+    ) / 3
+    overall = overall.sort_values("Overall-Score")
+    print("----- OVERALL BEST STATE RANKED -----")
+    print(overall.head())
+    overall.to_csv("csv_holder/Overall_Ranking_Data.csv", index=False)
+
+    return overall
+
 def CheckForMissingStates(data):
     if data.empty:
         empty_frame = pd.DataFrame()
@@ -263,17 +323,20 @@ def Main():
     else:
         print("The file does not exist.")
 
+    # make all the data fetch functions check their own data!
+    # then have it send it to main for procesing
     raw_data_state = requestStateData(token)
     raw_data_consumption = requestStateConsumptionData(token)
     raw_data_power_plants = requestPlantGenerationData(token)
-    # make all the data fetch functions check their own data!
-    # then have it send it to main for procesing
+    
+    #process the data into somehting clean and useable
     refined_data = refineData(raw_data_state, raw_data_consumption, raw_data_power_plants)
     
+    # compling rankings and other intresting tables out of the enriched and structerd data
     
     
-    # refined_data = refineData(raw_data_generation,raw_data_consumption)
-    # print(refined_data)
-    # checkDataClean(refined_data)
+    ranked_data = rankingData(refined_data)
+    
+
     
 Main()
