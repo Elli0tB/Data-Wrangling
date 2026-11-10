@@ -1,0 +1,338 @@
+election_date,state,county_name,county_fips,office,contest_id,candidate,party,votes
+2026-11-03,OR,Baker,41001,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,5755
+2026-11-03,OR,Baker,41001,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",2196
+2026-11-03,OR,Baker,41001,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,118
+2026-11-03,OR,Baker,41001,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",119
+2026-11-03,OR,Baker,41001,US Senator,2026-OR-USS-regular,Write-in,,5
+2026-11-03,OR,Benton,41003,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,12008
+2026-11-03,OR,Benton,41003,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",29511
+2026-11-03,OR,Benton,41003,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,386
+2026-11-03,OR,Benton,41003,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",1111
+2026-11-03,OR,Benton,41003,US Senator,2026-OR-USS-regular,Write-in,,22
+2026-11-03,OR,Clackamas,41005,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,88827
+2026-11-03,OR,Clackamas,41005,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",115807
+2026-11-03,OR,Clackamas,41005,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,2148
+2026-11-03,OR,Clackamas,41005,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",3763
+2026-11-03,OR,Clackamas,41005,US Senator,2026-OR-USS-regular,Write-in,,147
+2026-11-03,OR,Clatsop,41007,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,7989
+2026-11-03,OR,Clatsop,41007,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",11224
+2026-11-03,OR,Clatsop,41007,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,230
+2026-11-03,OR,Clatsop,41007,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",445
+2026-11-03,OR,Clatsop,41007,US Senator,2026-OR-USS-regular,Write-in,,11
+2026-11-03,OR,Columbia,41009,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,13491
+2026-11-03,OR,Columbia,41009,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",11426
+2026-11-03,OR,Columbia,41009,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,414
+2026-11-03,OR,Columbia,41009,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",568
+2026-11-03,OR,Columbia,41009,US Senator,2026-OR-USS-regular,Write-in,,28
+2026-11-03,OR,Coos,41011,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,16529
+2026-11-03,OR,Coos,41011,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",11652
+2026-11-03,OR,Coos,41011,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,374
+2026-11-03,OR,Coos,41011,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",574
+2026-11-03,OR,Coos,41011,US Senator,2026-OR-USS-regular,Write-in,,35
+2026-11-03,OR,Crook,41013,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,10107
+2026-11-03,OR,Crook,41013,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",3445
+2026-11-03,OR,Crook,41013,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,159
+2026-11-03,OR,Crook,41013,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",171
+2026-11-03,OR,Crook,41013,US Senator,2026-OR-USS-regular,Write-in,,11
+2026-11-03,OR,Curry,41015,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,6424
+2026-11-03,OR,Curry,41015,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",4979
+2026-11-03,OR,Curry,41015,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,161
+2026-11-03,OR,Curry,41015,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",196
+2026-11-03,OR,Curry,41015,US Senator,2026-OR-USS-regular,Write-in,,21
+2026-11-03,OR,Deschutes,41017,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,44014
+2026-11-03,OR,Deschutes,41017,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",60642
+2026-11-03,OR,Deschutes,41017,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,1068
+2026-11-03,OR,Deschutes,41017,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",1690
+2026-11-03,OR,Deschutes,41017,US Senator,2026-OR-USS-regular,Write-in,,45
+2026-11-03,OR,Douglas,41019,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,33674
+2026-11-03,OR,Douglas,41019,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",15763
+2026-11-03,OR,Douglas,41019,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,578
+2026-11-03,OR,Douglas,41019,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",942
+2026-11-03,OR,Douglas,41019,US Senator,2026-OR-USS-regular,Write-in,,58
+2026-11-03,OR,Gilliam,41021,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,647
+2026-11-03,OR,Gilliam,41021,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",302
+2026-11-03,OR,Gilliam,41021,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,14
+2026-11-03,OR,Gilliam,41021,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",15
+2026-11-03,OR,Gilliam,41021,US Senator,2026-OR-USS-regular,Write-in,,0
+2026-11-03,OR,Grant,41023,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,2807
+2026-11-03,OR,Grant,41023,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",784
+2026-11-03,OR,Grant,41023,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,51
+2026-11-03,OR,Grant,41023,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",50
+2026-11-03,OR,Grant,41023,US Senator,2026-OR-USS-regular,Write-in,,8
+2026-11-03,OR,Harney,41025,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,2744
+2026-11-03,OR,Harney,41025,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",800
+2026-11-03,OR,Harney,41025,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,53
+2026-11-03,OR,Harney,41025,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",51
+2026-11-03,OR,Harney,41025,US Senator,2026-OR-USS-regular,Write-in,,4
+2026-11-03,OR,Hood River,41027,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,3119
+2026-11-03,OR,Hood River,41027,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",7809
+2026-11-03,OR,Hood River,41027,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,113
+2026-11-03,OR,Hood River,41027,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",253
+2026-11-03,OR,Hood River,41027,US Senator,2026-OR-USS-regular,Write-in,,9
+2026-11-03,OR,Jackson,41029,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,49214
+2026-11-03,OR,Jackson,41029,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",49001
+2026-11-03,OR,Jackson,41029,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,1025
+2026-11-03,OR,Jackson,41029,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",1863
+2026-11-03,OR,Jackson,41029,US Senator,2026-OR-USS-regular,Write-in,,123
+2026-11-03,OR,Jefferson,41031,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,6094
+2026-11-03,OR,Jefferson,41031,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",3706
+2026-11-03,OR,Jefferson,41031,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,140
+2026-11-03,OR,Jefferson,41031,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",169
+2026-11-03,OR,Jefferson,41031,US Senator,2026-OR-USS-regular,Write-in,,10
+2026-11-03,OR,Josephine,41033,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,23774
+2026-11-03,OR,Josephine,41033,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",14442
+2026-11-03,OR,Josephine,41033,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,445
+2026-11-03,OR,Josephine,41033,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",614
+2026-11-03,OR,Josephine,41033,US Senator,2026-OR-USS-regular,Write-in,,64
+2026-11-03,OR,Klamath,41035,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,19328
+2026-11-03,OR,Klamath,41035,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",8585
+2026-11-03,OR,Klamath,41035,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,341
+2026-11-03,OR,Klamath,41035,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",433
+2026-11-03,OR,Klamath,41035,US Senator,2026-OR-USS-regular,Write-in,,39
+2026-11-03,OR,Lake,41037,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,2825
+2026-11-03,OR,Lake,41037,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",628
+2026-11-03,OR,Lake,41037,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,34
+2026-11-03,OR,Lake,41037,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",44
+2026-11-03,OR,Lake,41037,US Senator,2026-OR-USS-regular,Write-in,,8
+2026-11-03,OR,Lane,41039,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,64278
+2026-11-03,OR,Lane,41039,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",113051
+2026-11-03,OR,Lane,41039,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,1843
+2026-11-03,OR,Lane,41039,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",4526
+2026-11-03,OR,Lane,41039,US Senator,2026-OR-USS-regular,Write-in,,113
+2026-11-03,OR,Lincoln,41041,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,9233
+2026-11-03,OR,Lincoln,41041,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",15426
+2026-11-03,OR,Lincoln,41041,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,286
+2026-11-03,OR,Lincoln,41041,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",611
+2026-11-03,OR,Lincoln,41041,US Senator,2026-OR-USS-regular,Write-in,,9
+2026-11-03,OR,Linn,41043,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,35927
+2026-11-03,OR,Linn,41043,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",23423
+2026-11-03,OR,Linn,41043,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,846
+2026-11-03,OR,Linn,41043,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",1383
+2026-11-03,OR,Linn,41043,US Senator,2026-OR-USS-regular,Write-in,,46
+2026-11-03,OR,Malheur,41045,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,6041
+2026-11-03,OR,Malheur,41045,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",2624
+2026-11-03,OR,Malheur,41045,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,132
+2026-11-03,OR,Malheur,41045,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",163
+2026-11-03,OR,Malheur,41045,US Senator,2026-OR-USS-regular,Write-in,,6
+2026-11-03,OR,Marion,41047,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,43639
+2026-11-03,OR,Marion,41047,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",48767
+2026-11-03,OR,Marion,41047,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,938
+2026-11-03,OR,Marion,41047,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",1717
+2026-11-03,OR,Marion,41047,US Senator,2026-OR-USS-regular,Write-in,,65
+2026-11-03,OR,Morrow,41049,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,2689
+2026-11-03,OR,Morrow,41049,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",1132
+2026-11-03,OR,Morrow,41049,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,51
+2026-11-03,OR,Morrow,41049,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",74
+2026-11-03,OR,Morrow,41049,US Senator,2026-OR-USS-regular,Write-in,,5
+2026-11-03,OR,Multnomah,41051,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,53733
+2026-11-03,OR,Multnomah,41051,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",295646
+2026-11-03,OR,Multnomah,41051,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,2406
+2026-11-03,OR,Multnomah,41051,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",10534
+2026-11-03,OR,Multnomah,41051,US Senator,2026-OR-USS-regular,Write-in,,276
+2026-11-03,OR,Polk,41053,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,18290
+2026-11-03,OR,Polk,41053,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",17810
+2026-11-03,OR,Polk,41053,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,438
+2026-11-03,OR,Polk,41053,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",745
+2026-11-03,OR,Polk,41053,US Senator,2026-OR-USS-regular,Write-in,,25
+2026-11-03,OR,Sherman,41055,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,762
+2026-11-03,OR,Sherman,41055,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",225
+2026-11-03,OR,Sherman,41055,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,12
+2026-11-03,OR,Sherman,41055,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",15
+2026-11-03,OR,Sherman,41055,US Senator,2026-OR-USS-regular,Write-in,,1
+2026-11-03,OR,Tillamook,41057,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,6803
+2026-11-03,OR,Tillamook,41057,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",7148
+2026-11-03,OR,Tillamook,41057,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,140
+2026-11-03,OR,Tillamook,41057,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",311
+2026-11-03,OR,Tillamook,41057,US Senator,2026-OR-USS-regular,Write-in,,5
+2026-11-03,OR,Umatilla,41059,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,16408
+2026-11-03,OR,Umatilla,41059,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",8325
+2026-11-03,OR,Umatilla,41059,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,356
+2026-11-03,OR,Umatilla,41059,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",428
+2026-11-03,OR,Umatilla,41059,US Senator,2026-OR-USS-regular,Write-in,,11
+2026-11-03,OR,Union,41061,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,8387
+2026-11-03,OR,Union,41061,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",3653
+2026-11-03,OR,Union,41061,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,137
+2026-11-03,OR,Union,41061,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",234
+2026-11-03,OR,Union,41061,US Senator,2026-OR-USS-regular,Write-in,,8
+2026-11-03,OR,Wallowa,41063,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,2993
+2026-11-03,OR,Wallowa,41063,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",1439
+2026-11-03,OR,Wallowa,41063,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,45
+2026-11-03,OR,Wallowa,41063,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",59
+2026-11-03,OR,Wallowa,41063,US Senator,2026-OR-USS-regular,Write-in,,4
+2026-11-03,OR,Wasco,41065,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,5085
+2026-11-03,OR,Wasco,41065,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",5157
+2026-11-03,OR,Wasco,41065,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,163
+2026-11-03,OR,Wasco,41065,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",234
+2026-11-03,OR,Wasco,41065,US Senator,2026-OR-USS-regular,Write-in,,6
+2026-11-03,OR,Washington,41067,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,71337
+2026-11-03,OR,Washington,41067,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",161201
+2026-11-03,OR,Washington,41067,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,2329
+2026-11-03,OR,Washington,41067,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",5522
+2026-11-03,OR,Washington,41067,US Senator,2026-OR-USS-regular,Write-in,,172
+2026-11-03,OR,Wheeler,41069,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,528
+2026-11-03,OR,Wheeler,41069,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",195
+2026-11-03,OR,Wheeler,41069,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,8
+2026-11-03,OR,Wheeler,41069,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",26
+2026-11-03,OR,Wheeler,41069,US Senator,2026-OR-USS-regular,Write-in,,0
+2026-11-03,OR,Yamhill,41071,US Senator,2026-OR-USS-regular,David Brock Smith,Republican,24423
+2026-11-03,OR,Yamhill,41071,US Senator,2026-OR-USS-regular,Jeff Merkley,"Democrat, Working Families",23807
+2026-11-03,OR,Yamhill,41071,US Senator,2026-OR-USS-regular,Gary Lyndon Dye,Libertarian,547
+2026-11-03,OR,Yamhill,41071,US Senator,2026-OR-USS-regular,Chris Henry,"Progressive, Pacific Green",1006
+2026-11-03,OR,Yamhill,41071,US Senator,2026-OR-USS-regular,Write-in,,39
+2026-11-03,OR,Clatsop,41007,"US Representative, 1st District",2026-OR-USH-1,Barbara J Kahl,Republican,8098
+2026-11-03,OR,Clatsop,41007,"US Representative, 1st District",2026-OR-USH-1,Suzanne Bonamici,"Democrat, Working Families",11676
+2026-11-03,OR,Clatsop,41007,"US Representative, 1st District",2026-OR-USH-1,Write-in,,13
+2026-11-03,OR,Columbia,41009,"US Representative, 1st District",2026-OR-USH-1,Barbara J Kahl,Republican,13890
+2026-11-03,OR,Columbia,41009,"US Representative, 1st District",2026-OR-USH-1,Suzanne Bonamici,"Democrat, Working Families",11862
+2026-11-03,OR,Columbia,41009,"US Representative, 1st District",2026-OR-USH-1,Write-in,,39
+2026-11-03,OR,Multnomah,41051,"US Representative, 1st District",2026-OR-USH-1,Barbara J Kahl,Republican,7961
+2026-11-03,OR,Multnomah,41051,"US Representative, 1st District",2026-OR-USH-1,Suzanne Bonamici,"Democrat, Working Families",73571
+2026-11-03,OR,Multnomah,41051,"US Representative, 1st District",2026-OR-USH-1,Write-in,,141
+2026-11-03,OR,Tillamook,41057,"US Representative, 1st District",2026-OR-USH-1,Barbara J Kahl,Republican,6966
+2026-11-03,OR,Tillamook,41057,"US Representative, 1st District",2026-OR-USH-1,Suzanne Bonamici,"Democrat, Working Families",7357
+2026-11-03,OR,Tillamook,41057,"US Representative, 1st District",2026-OR-USH-1,Write-in,,19
+2026-11-03,OR,Washington,41067,"US Representative, 1st District",2026-OR-USH-1,Barbara J Kahl,Republican,51000
+2026-11-03,OR,Washington,41067,"US Representative, 1st District",2026-OR-USH-1,Suzanne Bonamici,"Democrat, Working Families",112151
+2026-11-03,OR,Washington,41067,"US Representative, 1st District",2026-OR-USH-1,Write-in,,268
+2026-11-03,OR,Baker,41001,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",2140
+2026-11-03,OR,Baker,41001,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,5955
+2026-11-03,OR,Baker,41001,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,13
+2026-11-03,OR,Clackamas,41005,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",0
+2026-11-03,OR,Clackamas,41005,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,0
+2026-11-03,OR,Clackamas,41005,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,0
+2026-11-03,OR,Crook,41013,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",3454
+2026-11-03,OR,Crook,41013,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,10357
+2026-11-03,OR,Crook,41013,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,20
+2026-11-03,OR,Deschutes,41017,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",5401
+2026-11-03,OR,Deschutes,41017,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,8181
+2026-11-03,OR,Deschutes,41017,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,10
+2026-11-03,OR,Douglas,41019,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",2870
+2026-11-03,OR,Douglas,41019,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,7395
+2026-11-03,OR,Douglas,41019,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,22
+2026-11-03,OR,Gilliam,41021,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",279
+2026-11-03,OR,Gilliam,41021,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,689
+2026-11-03,OR,Gilliam,41021,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,1
+2026-11-03,OR,Grant,41023,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",724
+2026-11-03,OR,Grant,41023,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,2953
+2026-11-03,OR,Grant,41023,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,14
+2026-11-03,OR,Harney,41025,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",756
+2026-11-03,OR,Harney,41025,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,2875
+2026-11-03,OR,Harney,41025,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,12
+2026-11-03,OR,Jackson,41029,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",50075
+2026-11-03,OR,Jackson,41029,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,50627
+2026-11-03,OR,Jackson,41029,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,132
+2026-11-03,OR,Jefferson,41031,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",3631
+2026-11-03,OR,Jefferson,41031,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,6269
+2026-11-03,OR,Jefferson,41031,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,12
+2026-11-03,OR,Josephine,41033,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",14585
+2026-11-03,OR,Josephine,41033,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,24474
+2026-11-03,OR,Josephine,41033,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,59
+2026-11-03,OR,Klamath,41035,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",8454
+2026-11-03,OR,Klamath,41035,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,20041
+2026-11-03,OR,Klamath,41035,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,35
+2026-11-03,OR,Lake,41037,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",588
+2026-11-03,OR,Lake,41037,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,2928
+2026-11-03,OR,Lake,41037,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,7
+2026-11-03,OR,Malheur,41045,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",2650
+2026-11-03,OR,Malheur,41045,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,6278
+2026-11-03,OR,Malheur,41045,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,14
+2026-11-03,OR,Marion,41047,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",0
+2026-11-03,OR,Marion,41047,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,0
+2026-11-03,OR,Marion,41047,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,0
+2026-11-03,OR,Morrow,41049,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",1100
+2026-11-03,OR,Morrow,41049,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,2780
+2026-11-03,OR,Morrow,41049,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,6
+2026-11-03,OR,Sherman,41055,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",214
+2026-11-03,OR,Sherman,41055,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,800
+2026-11-03,OR,Sherman,41055,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,3
+2026-11-03,OR,Umatilla,41059,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",8525
+2026-11-03,OR,Umatilla,41059,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,16857
+2026-11-03,OR,Umatilla,41059,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,40
+2026-11-03,OR,Union,41061,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",3791
+2026-11-03,OR,Union,41061,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,8472
+2026-11-03,OR,Union,41061,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,18
+2026-11-03,OR,Wallowa,41063,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",1489
+2026-11-03,OR,Wallowa,41063,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,3010
+2026-11-03,OR,Wallowa,41063,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,6
+2026-11-03,OR,Wasco,41065,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",5214
+2026-11-03,OR,Wasco,41065,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,5289
+2026-11-03,OR,Wasco,41065,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,20
+2026-11-03,OR,Wheeler,41069,"US Representative, 2nd District",2026-OR-USH-2,Chris Beck,"Democrat, Independent",191
+2026-11-03,OR,Wheeler,41069,"US Representative, 2nd District",2026-OR-USH-2,Cliff Bentz,Republican,563
+2026-11-03,OR,Wheeler,41069,"US Representative, 2nd District",2026-OR-USH-2,Write-in,,1
+2026-11-03,OR,Clackamas,41005,"US Representative, 3rd District",2026-OR-USH-3,Maxine E Dexter,Democrat,18689
+2026-11-03,OR,Clackamas,41005,"US Representative, 3rd District",2026-OR-USH-3,Loran Ayles,Republican,21612
+2026-11-03,OR,Clackamas,41005,"US Representative, 3rd District",2026-OR-USH-3,Write-in,,62
+2026-11-03,OR,Hood River,41027,"US Representative, 3rd District",2026-OR-USH-3,Maxine E Dexter,Democrat,7924
+2026-11-03,OR,Hood River,41027,"US Representative, 3rd District",2026-OR-USH-3,Loran Ayles,Republican,3140
+2026-11-03,OR,Hood River,41027,"US Representative, 3rd District",2026-OR-USH-3,Write-in,,41
+2026-11-03,OR,Multnomah,41051,"US Representative, 3rd District",2026-OR-USH-3,Maxine E Dexter,Democrat,206098
+2026-11-03,OR,Multnomah,41051,"US Representative, 3rd District",2026-OR-USH-3,Loran Ayles,Republican,42870
+2026-11-03,OR,Multnomah,41051,"US Representative, 3rd District",2026-OR-USH-3,Write-in,,586
+2026-11-03,OR,Benton,41003,"US Representative, 4th District",2026-OR-USH-4,Monique DeSpain,"Republican, Libertarian",12999
+2026-11-03,OR,Benton,41003,"US Representative, 4th District",2026-OR-USH-4,Val Hoyle,"Democrat, Working Families",28191
+2026-11-03,OR,Benton,41003,"US Representative, 4th District",2026-OR-USH-4,Justin Filip,"Pacific Green, Progressive",1690
+2026-11-03,OR,Benton,41003,"US Representative, 4th District",2026-OR-USH-4,Write-in,,29
+2026-11-03,OR,Coos,41011,"US Representative, 4th District",2026-OR-USH-4,Monique DeSpain,"Republican, Libertarian",17091
+2026-11-03,OR,Coos,41011,"US Representative, 4th District",2026-OR-USH-4,Val Hoyle,"Democrat, Working Families",11201
+2026-11-03,OR,Coos,41011,"US Representative, 4th District",2026-OR-USH-4,Justin Filip,"Pacific Green, Progressive",861
+2026-11-03,OR,Coos,41011,"US Representative, 4th District",2026-OR-USH-4,Write-in,,29
+2026-11-03,OR,Curry,41015,"US Representative, 4th District",2026-OR-USH-4,Monique DeSpain,"Republican, Libertarian",6417
+2026-11-03,OR,Curry,41015,"US Representative, 4th District",2026-OR-USH-4,Val Hoyle,"Democrat, Working Families",4917
+2026-11-03,OR,Curry,41015,"US Representative, 4th District",2026-OR-USH-4,Justin Filip,"Pacific Green, Progressive",296
+2026-11-03,OR,Curry,41015,"US Representative, 4th District",2026-OR-USH-4,Write-in,,15
+2026-11-03,OR,Douglas,41019,"US Representative, 4th District",2026-OR-USH-4,Monique DeSpain,"Republican, Libertarian",27263
+2026-11-03,OR,Douglas,41019,"US Representative, 4th District",2026-OR-USH-4,Val Hoyle,"Democrat, Working Families",12065
+2026-11-03,OR,Douglas,41019,"US Representative, 4th District",2026-OR-USH-4,Justin Filip,"Pacific Green, Progressive",1150
+2026-11-03,OR,Douglas,41019,"US Representative, 4th District",2026-OR-USH-4,Write-in,,45
+2026-11-03,OR,Lane,41039,"US Representative, 4th District",2026-OR-USH-4,Monique DeSpain,"Republican, Libertarian",69491
+2026-11-03,OR,Lane,41039,"US Representative, 4th District",2026-OR-USH-4,Val Hoyle,"Democrat, Working Families",107846
+2026-11-03,OR,Lane,41039,"US Representative, 4th District",2026-OR-USH-4,Justin Filip,"Pacific Green, Progressive",6589
+2026-11-03,OR,Lane,41039,"US Representative, 4th District",2026-OR-USH-4,Write-in,,164
+2026-11-03,OR,Lincoln,41041,"US Representative, 4th District",2026-OR-USH-4,Monique DeSpain,"Republican, Libertarian",9622
+2026-11-03,OR,Lincoln,41041,"US Representative, 4th District",2026-OR-USH-4,Val Hoyle,"Democrat, Working Families",14902
+2026-11-03,OR,Lincoln,41041,"US Representative, 4th District",2026-OR-USH-4,Justin Filip,"Pacific Green, Progressive",834
+2026-11-03,OR,Lincoln,41041,"US Representative, 4th District",2026-OR-USH-4,Write-in,,16
+2026-11-03,OR,Linn,41043,"US Representative, 4th District",2026-OR-USH-4,Monique DeSpain,"Republican, Libertarian",293
+2026-11-03,OR,Linn,41043,"US Representative, 4th District",2026-OR-USH-4,Val Hoyle,"Democrat, Working Families",392
+2026-11-03,OR,Linn,41043,"US Representative, 4th District",2026-OR-USH-4,Justin Filip,"Pacific Green, Progressive",16
+2026-11-03,OR,Linn,41043,"US Representative, 4th District",2026-OR-USH-4,Write-in,,0
+2026-11-03,OR,Clackamas,41005,"US Representative, 5th District",2026-OR-USH-5,Janelle S Bynum,Democrat,83217
+2026-11-03,OR,Clackamas,41005,"US Representative, 5th District",2026-OR-USH-5,Andrea Townsend,Pacific Green,3179
+2026-11-03,OR,Clackamas,41005,"US Representative, 5th District",2026-OR-USH-5,Patti Adair,"Republican, Libertarian",61674
+2026-11-03,OR,Clackamas,41005,"US Representative, 5th District",2026-OR-USH-5,Write-in,,146
+2026-11-03,OR,Deschutes,41017,"US Representative, 5th District",2026-OR-USH-5,Janelle S Bynum,Democrat,53912
+2026-11-03,OR,Deschutes,41017,"US Representative, 5th District",2026-OR-USH-5,Andrea Townsend,Pacific Green,1576
+2026-11-03,OR,Deschutes,41017,"US Representative, 5th District",2026-OR-USH-5,Patti Adair,"Republican, Libertarian",38188
+2026-11-03,OR,Deschutes,41017,"US Representative, 5th District",2026-OR-USH-5,Write-in,,86
+2026-11-03,OR,Jefferson,41031,"US Representative, 5th District",2026-OR-USH-5,Janelle S Bynum,Democrat,3
+2026-11-03,OR,Jefferson,41031,"US Representative, 5th District",2026-OR-USH-5,Andrea Townsend,Pacific Green,1
+2026-11-03,OR,Jefferson,41031,"US Representative, 5th District",2026-OR-USH-5,Patti Adair,"Republican, Libertarian",6
+2026-11-03,OR,Jefferson,41031,"US Representative, 5th District",2026-OR-USH-5,Write-in,,0
+2026-11-03,OR,Linn,41043,"US Representative, 5th District",2026-OR-USH-5,Janelle S Bynum,Democrat,22645
+2026-11-03,OR,Linn,41043,"US Representative, 5th District",2026-OR-USH-5,Andrea Townsend,Pacific Green,1537
+2026-11-03,OR,Linn,41043,"US Representative, 5th District",2026-OR-USH-5,Patti Adair,"Republican, Libertarian",36269
+2026-11-03,OR,Linn,41043,"US Representative, 5th District",2026-OR-USH-5,Write-in,,59
+2026-11-03,OR,Marion,41047,"US Representative, 5th District",2026-OR-USH-5,Janelle S Bynum,Democrat,6938
+2026-11-03,OR,Marion,41047,"US Representative, 5th District",2026-OR-USH-5,Andrea Townsend,Pacific Green,384
+2026-11-03,OR,Marion,41047,"US Representative, 5th District",2026-OR-USH-5,Patti Adair,"Republican, Libertarian",10991
+2026-11-03,OR,Marion,41047,"US Representative, 5th District",2026-OR-USH-5,Write-in,,31
+2026-11-03,OR,Multnomah,41051,"US Representative, 5th District",2026-OR-USH-5,Janelle S Bynum,Democrat,21019
+2026-11-03,OR,Multnomah,41051,"US Representative, 5th District",2026-OR-USH-5,Andrea Townsend,Pacific Green,855
+2026-11-03,OR,Multnomah,41051,"US Representative, 5th District",2026-OR-USH-5,Patti Adair,"Republican, Libertarian",3806
+2026-11-03,OR,Multnomah,41051,"US Representative, 5th District",2026-OR-USH-5,Write-in,,22
+2026-11-03,OR,Clackamas,41005,"US Representative, 6th District",2026-OR-USH-6,Andrea Salinas,"Democrat, Independent",12069
+2026-11-03,OR,Clackamas,41005,"US Representative, 6th District",2026-OR-USH-6,David Russ,Republican,7130
+2026-11-03,OR,Clackamas,41005,"US Representative, 6th District",2026-OR-USH-6,Write-in,,25
+2026-11-03,OR,Marion,41047,"US Representative, 6th District",2026-OR-USH-6,Andrea Salinas,"Democrat, Independent",42728
+2026-11-03,OR,Marion,41047,"US Representative, 6th District",2026-OR-USH-6,David Russ,Republican,33208
+2026-11-03,OR,Marion,41047,"US Representative, 6th District",2026-OR-USH-6,Write-in,,96
+2026-11-03,OR,Polk,41053,"US Representative, 6th District",2026-OR-USH-6,Andrea Salinas,"Democrat, Independent",18368
+2026-11-03,OR,Polk,41053,"US Representative, 6th District",2026-OR-USH-6,David Russ,Republican,18627
+2026-11-03,OR,Polk,41053,"US Representative, 6th District",2026-OR-USH-6,Write-in,,48
+2026-11-03,OR,Washington,41067,"US Representative, 6th District",2026-OR-USH-6,Andrea Salinas,"Democrat, Independent",52385
+2026-11-03,OR,Washington,41067,"US Representative, 6th District",2026-OR-USH-6,David Russ,Republican,23439
+2026-11-03,OR,Washington,41067,"US Representative, 6th District",2026-OR-USH-6,Write-in,,81
+2026-11-03,OR,Yamhill,41071,"US Representative, 6th District",2026-OR-USH-6,Andrea Salinas,"Democrat, Independent",24530
+2026-11-03,OR,Yamhill,41071,"US Representative, 6th District",2026-OR-USH-6,David Russ,Republican,24875
+2026-11-03,OR,Yamhill,41071,"US Representative, 6th District",2026-OR-USH-6,Write-in,,53

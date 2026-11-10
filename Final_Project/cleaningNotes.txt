@@ -1,0 +1,92 @@
+1. Investigate four areas
+
+    Missing values: any states that are missing will be filled with a missing state data flag and making any mising values into a Nan
+    Invalid values: for this we actually shouldn't really get any invalid values due to negatives being acceptible.
+    Categorical consistency: Inspect distinct labels and variations in case, spacing, spelling, or abbreviations. Determine which are supported equivalents.
+    Duplicate records: currently we are still locked to one year of data at a time so we wont get duplicates except from the plant data where we drop and handle the duplicates
+
+2. Apply justified treatments
+    the main treatment that is being done is the missing data flag that lets us know when to exclude the states that are missing data. 
+    this will stop us from acidently counting these in our ranking data
+
+
+    the bulk of the changes are from here in CheckForMissingStates 
+
+    missing = expected_states - returned_states
+    data['missing_data_flag'] = False
+    if missing:
+        print("Missing States:", missing)
+        logging.error("ERROR: State validation failed")
+        print(f"The following states are excluded from the data: {missing}")
+        logging.debug("Resolving missing states by adding NaN rows")
+        tmp_list = []
+        for state in missing:
+            if "stateID" in data.columns:
+                empty_state_row = {"period": year,"stateID": state, "missing_data_flag": True}
+            else:
+                empty_state_row = {"period": year, "state": state, "missing_data_flag": True}
+            tmp_list.append(empty_state_row)
+        tmp_df = pd.DataFrame(tmp_list)
+        data = pd.concat([data, tmp_df], ignore_index=True)
+        return data
+
+Year State-ID Electricity-Price (¢/kWh) Emisions-Intensity         ... Worst-Plant-Generation              Worst-Plant-Type  Wasted-Power 
+0   2024-08       AK                     22.17               1196  ...                -412.00                         Other      -1648.49             
+1   2024-03       AL                      11.9                747  ...               -4938.00                   Natural Gas      -6372.99     
+2   2024-01       AR                      9.59                960  ...                 -79.00    Hydroelectric Conventional       -248.00    
+3   2024-04       AZ                     12.74                634  ...              -13199.00  Hydroelectric Pumped Storage     -51852.00    
+4   2024-12       CA                     27.04                407  ...              -79400.00  Hydroelectric Pumped Storage    -512387.00    
+5   2024-11       CO                     12.07                958  ...              -31756.00                   Natural Gas     -43682.32    
+6   2024-01       CT                     24.37                541  ...              -14219.88           Distillate Fuel Oil     -37391.66    
+7   2024-12       DC                     16.88                937  ...                   0.00           Distillate Fuel Oil          0.00    
+8   2024-02       DE                     13.56               1126  ...               -2416.51                          Coal     -10108.38    
+9   2024-01       FL                     12.53                765  ...               -2918.00                         Other      -8588.13    
+10  2024-08       GA                      11.4                672  ...              -43135.00  Hydroelectric Pumped Storage    -262671.37    
+11  2024-07       HI                        38               1426  ...               -2168.00                         Other      -4964.00    
+12  2024-02       IA                       NaN                NaN  ...               -6414.80                          Coal     -18262.24    
+
+after 
+
+Year State-ID Electricity-Price (¢/kWh) Emisions-Intensity       ...         Worst-Plant-Generation          Worst-Plant-Type     Wasted-Power     Missing-Data-Flag
+0   2024-08       AK                     22.17               1196  ...                -412.00                         Other      -1648.49             False
+1   2024-03       AL                      11.9                747  ...               -4938.00                   Natural Gas      -6372.99             False
+2   2024-01       AR                      9.59                960  ...                 -79.00    Hydroelectric Conventional       -248.00             False
+3   2024-04       AZ                     12.74                634  ...              -13199.00  Hydroelectric Pumped Storage     -51852.00             False
+4   2024-12       CA                     27.04                407  ...              -79400.00  Hydroelectric Pumped Storage    -512387.00             False
+5   2024-11       CO                     12.07                958  ...              -31756.00                   Natural Gas     -43682.32             False
+6   2024-01       CT                     24.37                541  ...              -14219.88           Distillate Fuel Oil     -37391.66             False
+7   2024-12       DC                     16.88                937  ...                   0.00           Distillate Fuel Oil          0.00             False
+8   2024-02       DE                     13.56               1126  ...               -2416.51                          Coal     -10108.38             False
+9   2024-01       FL                     12.53                765  ...               -2918.00                         Other      -8588.13             False
+10  2024-08       GA                      11.4                672  ...              -43135.00  Hydroelectric Pumped Storage    -262671.37             False
+11  2024-07       HI                        38               1426  ...               -2168.00                         Other      -4964.00             False
+12  2024-02       IA                       NaN                NaN  ...               -6414.80                          Coal     -18262.24              True
+
+3. Validate and reproduce
+    this code checks for any missing states
+    if data.empty:
+        empty_frame = pd.DataFrame()
+        return empty_frame
+    expected_states = {"AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI",
+            "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN",
+            "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH",
+            "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT",
+            "WA", "WI", "WV", "WY"}
+    if "stateID" in data.columns:
+        returned_states = set(data["stateID"].unique())
+    elif "state" in data.columns:
+        returned_states = set(data["state"].unique())
+    else:
+        logging.error("ERROR: Raw data did not have a stateID or a state identifer")
+        logging.critical("Quiting program, ERROR must be resolved")
+        sys.exit()
+
+    logging.info("---Checking for missing values---" )
+    rows_missing_some_data =data[data.isna().any(axis=1)]
+    logging.debug(f"---{len(rows_missing_some_data)} rows were missing at least 1 coloums data---")
+
+    and this one higer will check if there are any feilds that were missing data that isnt being accounted for
+4. Interpret and hand off
+
+Now this lets us see much more recent data, however we still cant see over more than one year, which will be the next item for me to look into. 
+Other steps are simple clean up more error handling, keeping metadata intact and more verifacation. 

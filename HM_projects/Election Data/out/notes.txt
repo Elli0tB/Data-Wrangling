@@ -1,0 +1,12 @@
+- Source: Statewide.xlsx - Oregon unofficial general election results, downloaded 11/9/2026 (per sheet header). Election date 2026-11-03 is supplied by this script, not stated in the workbook.
+- county_fips: derived from county name (41 + 3-digit county code). The sheet's CountyID column is the Oregon SOS internal code, not FIPS, and was not used.
+- ballots_cast / registered_voters: NOT in the workbook, left blank. Ballots were not estimated by summing candidate votes. Fill via --turnout from the official county source and record its definition (cast / accepted / counted; registration definition) here.
+- party: taken verbatim from NominatingParty in Statewide.csv (matched on ContestID + candidate name). Multi-party nominations are kept as the source writes them, e.g. 'Democrat, Working Families'. The aggregate Write-in line has no label in the source, so its party is blank (unknown).
+- Cross-check: county rows summed per candidate match the Statewide.csv totals for every candidate.
+- TOTALS rows in each sheet were dropped (source totals; components are kept, never both).
+- Contests: US Senator (2026-OR-USS-regular) and US House districts 1-6 (2026-OR-USH-N). Whether the Senate seat is regular vs special should be confirmed.
+- Geographic scope: House contests cover only the portion of a county inside that district. Counties split across districts have separate rows per district; do not add different offices' votes together as distinct people.
+- 'Write-in' is the source's aggregate write-in line and is kept as a candidate row.
+- Zero-vote rows kept as reported (all candidates 0); verify: Clackamas in 2026-OR-USH-2; Marion in 2026-OR-USH-2
+- Very small counts (e.g. Jefferson in USH-5, Linn in USH-4) likely reflect tiny precinct slivers of a split county; kept as reported.
+- Results are UNOFFICIAL (Statewide.csv PrecinctsReporting field reads 0/N for every contest); re-pull after certification.
