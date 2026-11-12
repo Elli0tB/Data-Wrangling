@@ -1,0 +1,14 @@
+- Source: 20261103_CountyResults.csv (Oklahoma county results, election date 2026-11-03). Already one row per county-race-candidate/option; state OK is inferred from the county names.
+- county_fips: derived from county name (40 + 3-digit county code); the file has no FIPS column.
+- ballots_cast / registered_voters: NOT in the results file, left blank. Ballots were not estimated by adding candidate votes. Fill via --turnout and record the source's definition (ballots cast / accepted / counted; registration definition) here.
+- votes: cand_tot_votes. The absentee/mail, early and election-day columns are its disjoint components and were not added again; they sum to the total in every row (0 mismatches).
+- Missing/non-numeric vote cells: 0; negative: 0; duplicate county-race-candidate rows: 0; rows where precincts reporting < total precincts: 0.
+- party: source code kept verbatim (REP, DEM, IND, LIB). Blank source party on ballot options (YES/NO) and on judicial, municipal and special-district contests is written as N/A (nonpartisan); this is an inference from office type, not a source label. Blank-party rows left as unknown on partisan offices: 0.
+- No write-in aggregate lines appear in this file, so none are included.
+- Contest IDs: statewide/district IDs use the usual codes (GOV, LTGOV, AG, TREAS, SPI, LABOR, INS, CORPCOMM, USS, USH-n, STS-n, STH-n, DJ-district-office, ADJ-county, SQ-n); county offices and measures are 2026-OK-county-<3-digit county FIPS>-...; city/town/fire-district contests use the jurisdiction slug. The same ID is used on every county row of the same source race_number; see contest_reference.csv for each ID's source number, description and geographic scope.
+- Please confirm with the instructor: US Senate labeled 'regular' (the file has a single US Senate race); YES/NO contests for Supreme Court, Court of Criminal Appeals and Court of Civil Appeals seats are labeled '-retention' (inferred from the YES/NO options; the file names no judge).
+- State questions and the statewide judicial retention contests appear in all 77 counties.
+- Geographic scope: 55 contests cover only part of each of 2+ counties (US House, state legislative, district judge, and some city contests); each county row is that county's portion of the district/jurisdiction. All other non-statewide contests are single-county. Votes for different offices must not be added as if they were distinct voters.
+- Zero-vote county rows kept as reported (all options 0): Osage in 2026-OK-city-of-bartlesville-councilmember-ward-4; Washita in 2026-OK-city-of-clinton-councilman-ward-4; Washita in 2026-OK-city-of-clinton-mayor; Rogers in 2026-OK-city-of-tulsa-proposition-hotel-tax-proposition-no-1
+- race_county_owner is not a column in the output; it is listed in contest_reference.csv (county_owner).
+- Results are as reported in the file; confirm against certified results.
