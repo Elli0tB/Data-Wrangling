@@ -11,15 +11,15 @@ def fetchRawData(URL, params):
     #before fetching data sleep, so we dont overload the api
     raw_data_frame = pd.DataFrame()
     time.sleep(1)
-    logging.info("requesting data from:", URL)
+    print(f"requesting data from: {URL}")
     #check the status for the request
     try: 
         request = requests.get(URL,params=params)
         request.raise_for_status()
         response = request.json().get("response")
     except requests.exceptions.HTTPError as err:
-        logging.error(f"Error status code {err.response.status_code}") 
-        #return False
+        print(f"Error status code {err.response.status_code}") 
+        return pd.DataFrame()
     raw_data_frame = pd.DataFrame(response.get("data"))
     return raw_data_frame
 
@@ -94,8 +94,11 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
         #this is the end result table period,plantName,fuelType,fuelTypeDescription,state,generation,generation-units,
         #df = df[df['col_name'] != 'value'] this is a good way to drop  rows based off a val in a col
 
+        
+
         # lets get a hold of the wasted power 
         raw_data_pwr_plnt['generation'] = pd.to_numeric(raw_data_pwr_plnt['generation'], errors='coerce')
+        raw_data_pwr_plnt = raw_data_pwr_plnt.dropna(subset=['generation']).reset_index(drop=True)
         wasted = (raw_data_pwr_plnt[raw_data_pwr_plnt['generation'] < 0]
           .groupby(['state_id', 'year'], as_index=False)['generation']
           .sum()
@@ -107,7 +110,6 @@ def refineData(raw_data_state, raw_data_com, raw_data_pwr_plnt):
 
         worst = (raw_data_pwr_plnt.loc[raw_data_pwr_plnt.groupby('state_id')['generation'].idxmin(), ['year','plantName','fuelType','fuelTypeDescription','state_id','generation','generation-units']]
             .rename(columns={'plantName': 'worst_plant', 'generation': 'worst_generation', 'fuelTypeDescription' : 'fuelTypeDescription_worst'}))
-
         
         # Step 2: merge everything on state
         final = (raw_data_state.merge(raw_data_com, on=['state_id', 'year'], how='left')
@@ -184,13 +186,21 @@ def rankingData(refined_data):
     print("----- MOVING ON TO NEXT RANKING -----")
     Worst_difference_ranking_data.to_csv('csv_holder/Difference_Ranking_Data.csv', index= False)
 
+    Best_price_ranking_data = refined_data.sort_values(by= 'Electricity-Price (¢/kWh)', ascending=True)
+    print("----- BEST PRICE DATA RANKED -----")
+    print(Best_price_ranking_data.head())
+    time.sleep(5)
+    print("----- MOVING ON TO NEXT RANKING -----")
+    Best_price_ranking_data.to_csv('csv_holder/Best_Price_Ranking_Data.csv', index= False)
+
     #Best State Overall
     overall = refined_data.copy()
     overall["Overall-Score"] = (
         overall["Best-Plant-Generation"].rank(ascending=False)
         + overall["Emisions-Intensity"].rank(ascending=True)
         + overall["Diffrence"].rank(ascending=False)
-    ) / 3
+        + overall["Electricity-Price (¢/kWh)"].rank(ascending=False)
+    ) / 4
     overall = overall.sort_values("Overall-Score")
     print("----- OVERALL BEST STATE RANKED -----")
     print(overall.head())

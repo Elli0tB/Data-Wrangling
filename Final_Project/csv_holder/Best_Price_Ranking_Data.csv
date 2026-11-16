@@ -1,0 +1,52 @@
+Year,State-ID,Electricity-Price (¢/kWh),Emisions-Intensity,Total-Generation (MWh),Total-Consumption (MWh),Diffrence,Best-Plant,Best-Plant-Generation,Best-Plant-Type,Worst-Plant,Worst-Plant-Generation,Worst-Plant-Type,Wasted-Power,Missing-Data-Flag
+2024-05,UT,9.97,1322,35133906,35133906,0.0,Intermountain Power Project,789949.62,Coal,Gadsby,-267.0,Natural Gas,-305.0,False
+2024-05,TX,9.79,823,566502688,566527444,-24756.0,South Texas Project,1983705.0,Nuclear,Limestone,-8581.19,Coal,-72516.0,False
+2024-01,AR,9.59,960,61542484,61542484,0.0,Union Power Station,1423428.0,Natural Gas,Narrows (AR),-79.0,Hydroelectric Conventional,-248.0,False
+2024-07,ID,9.51,382,20035438,20035438,0.0,Brownlee,331028.0,Hydroelectric Conventional,Lateral 10 Ventures,-870.0,Hydroelectric Conventional,-2025.02,False
+2024-01,WY,9.14,1724,40709150,40709150,0.0,Laramie River Station,850726.24,Coal,Glendo,-152.0,Hydroelectric Conventional,-532.0,False
+2024-09,OK,9.09,673,94069145,94069145,0.0,Kiamichi Energy Facility,728860.0,Natural Gas,Salina,-5845.0,Hydroelectric Pumped Storage,-16527.71,False
+2024-08,NE,9.07,1082,37228950,37228950,0.0,Gerald Gentleman,796449.04,Coal,Nebraska City # 2,-108.84,Natural Gas,-623.4,False
+2024-02,LA,8.8,927,99622835,99622835,0.0,Nine Mile Point,1049103.0,Natural Gas,Mosaic Phosphates Uncle Sam,-8707.0,Other,-18221.46,False
+2024-02,ND,7.93,1424,42557243,43255574,-698331.0,Coal Creek,801419.0,Coal,R M Heskett,-170.0,Natural Gas,-340.0,False
+2024-07,HI,38,1426,9160979,9160979,0.0,Kahe,272175.0,Residual Fuel Oil,Kapolei Energy Storage,-2168.0,Other,-4964.0,False
+2024-12,CA,27.04,407,214191383,220220020,-6028637.0,Diablo Canyon,1683852.0,Nuclear,W R Gianelli,-79400.0,Hydroelectric Pumped Storage,-512387.0,False
+2024-01,CT,24.37,541,44761412,44761412,0.0,Millstone,1568155.0,Nuclear,Stamford Health,-14219.88,Distillate Fuel Oil,-37391.66,False
+2024-01,RI,24.15,828,9777026,9777026,0.0,Rhode Island State Energy Center,390134.0,Natural Gas,Ocean State BTM,-47.0,Other,-94.0,False
+2024-07,MA,23.94,936,20914890,20914890,0.0,Mystic Generating Station,549510.0,Natural Gas,Northfield Mountain,-29951.0,Hydroelectric Pumped Storage,-103657.82,False
+2024-08,AK,22.17,1196,6690506,6690506,0.0,Southcentral Power Project,98307.0,Natural Gas,Battery Energy Storage System,-412.0,Other,-1648.49,False
+2024-07,NH,20.61,280,16942479,16942479,0.0,Seabrook,928657.0,Nuclear,Berlin Gorham,-154.0,Other,-308.0,False
+2024-07,NY,19.66,537,129015493,137866347,-8850854.0,Robert Moses Niagara,1453133.0,Hydroelectric Conventional,OBP Cogen,-46213.68,Natural Gas,-179545.36,False
+2024-05,ME,19.66,487,14655178,16084767,-1429589.0,Westbrook Energy Center Power Plant,373131.0,Natural Gas,Bonny Eagle,-210.0,Other,-1537.06,False
+2024-10,VT,18.41,8,2258891,8438845,-6179954.0,Bellows Falls,34272.0,Hydroelectric Conventional,Springfield BESS,-134.0,Other,-662.0,False
+2024-12,DC,16.88,937,187195,187195,0.0,US GSA Heating and Transmission,6044.64,Natural Gas,US GSA Heating and Transmission,0.0,Distillate Fuel Oil,0.0,False
+2024-07,NJ,16.29,507,60175245,60175245,0.0,PSEG Salem Generating Station,1746642.0,Nuclear,Yards Creek Energy,-28839.0,Hydroelectric Pumped Storage,-61514.0,False
+2024-11,MD,15.04,604,35424816,35424816,0.0,Calvert Cliffs Nuclear Power Plant,1341211.0,Nuclear,Chalk Point Power,-3519.99,Natural Gas,-9578.68,False
+2024-08,MI,14.16,957,124200090,127564535,-3364445.0,Donald C Cook,1711494.0,Nuclear,Ludington,-144450.0,Hydroelectric Pumped Storage,-289317.72,False
+2024-02,DE,13.56,1126,4799212,4799212,0.0,Hay Road,305591.0,Natural Gas,Indian River Generating Station,-2416.51,Coal,-10108.38,False
+2024-04,AZ,12.74,634,116026511,116026511,0.0,Palo Verde,2987772.0,Nuclear,Waddell,-13199.0,Hydroelectric Pumped Storage,-51852.0,False
+2024-11,WI,12.72,1090,65276344,65276344,0.0,Point Beach Nuclear Plant,897283.0,Nuclear,Blount Street,-167.0,Natural Gas,-602.0,False
+2024-01,FL,12.53,765,266119236,266119236,0.0,West County Energy Center,2251116.0,Natural Gas,Manatee Solar Energy Center,-2918.0,Other,-8588.13,False
+2024-02,PA,12.51,659,241498648,241498648,0.0,Peach Bottom,2002071.0,Nuclear,Muddy Run,-45914.0,Hydroelectric Pumped Storage,-176161.26,False
+2024-01,MN,12.35,766,58595222,63677106,-5081884.0,Sherburne County,841982.26,Coal,Prairie Island,-75709.0,Nuclear,-151905.94,False
+2024-03,IL,12.21,510,185012935,185012935,0.0,Braidwood Generation Station,1786938.0,Nuclear,Powerton,-8054.0,Coal,-18177.22,False
+2024-11,CO,12.07,958,58798395,58798395,0.0,Comanche (CO),631927.04,Coal,Cherokee,-31756.0,Natural Gas,-43682.32,False
+2024-03,AL,11.9,747,142921216,142921216,0.0,Browns Ferry,2828865.0,Nuclear,Barry,-4938.0,Natural Gas,-6372.99,False
+2024-02,NC,11.65,670,134965396,134965396,0.0,McGuire,1768192.0,Nuclear,Mayo,-7090.21,Coal,-21917.0,False
+2024-10,NV,11.47,631,45528427,45528427,0.0,Chuck Lenzie Generating Station,711471.0,Natural Gas,Gemini Solar Hybrid,-5425.0,Other,-30877.0,False
+2024-08,GA,11.4,672,139805428,139805428,0.0,Vogtle,3347115.0,Nuclear,Rocky Mountain Hydroelectric Plant,-43135.0,Hydroelectric Pumped Storage,-262671.37,False
+2024-05,IN,11.38,1393,97012880,97012880,0.0,Gibson,1245236.55,Coal,Michigan City,-4830.0,Natural Gas,-9814.0,False
+2024-05,OH,11.29,1005,142746706,142746706,0.0,"Gavin Power, LLC",1380459.66,Coal,Niles Power Plant,-267.82,Distillate Fuel Oil,-1449.7,False
+2024-12,OR,11.11,352,64661249,64661249,0.0,John Day,716253.0,Hydroelectric Conventional,Sundial (Troutdale) BESS,-3510.0,Other,-10684.0,False
+2024-07,MO,11.06,1456,66875710,66875710,0.0,Labadie,1591876.06,Coal,Taum Sauk,-23618.0,Hydroelectric Pumped Storage,-47236.0,False
+2024-01,WV,11.05,1912,50594818,50594818,0.0,FirstEnergy Harrison Power Station,1232722.63,Coal,Beech Ridge Energy Storage,-586.0,Other,-1824.0,False
+2024-01,MS,10.93,794,77336712,77336712,0.0,Grand Gulf,1054194.0,Nuclear,Quantum Choctaw Power LLC,-1235.0,Natural Gas,-2470.0,False
+2024-08,TN,10.9,804,76166766,76166766,0.0,Watts Bar Nuclear Plant,1733421.0,Nuclear,Raccoon Mountain,-76170.0,Hydroelectric Pumped Storage,-152486.0,False
+2024-07,SC,10.9,589,100485416,100485416,0.0,Oconee,1985339.0,Nuclear,Bad Creek,-70708.0,Hydroelectric Pumped Storage,-204087.36,False
+2024-11,MT,10.83,969,26872883,27236261,-363378.0,Colstrip,1035095.0,Coal,Lewis & Clark,-119.0,Natural Gas,-238.0,False
+2024-07,VA,10.62,631,102698615,102698615,0.0,North Anna,1458647.0,Nuclear,Bath County,-165927.0,Hydroelectric Pumped Storage,-449868.0,False
+2024-09,WA,10.13,249,102397711,103630371,-1232660.0,Grand Coulee,1831884.0,Hydroelectric Conventional,Snoqualmie 2,-28000.0,Hydroelectric Conventional,-56678.0,False
+2024-10,KY,10.07,1744,66950848,66950848,0.0,Ghent,1039988.84,Coal,East Bend,-4396.0,Distillate Fuel Oil,-12488.6,False
+2024-02,IA,,,,70464148,,Walter Scott Jr Energy Center,901991.11,Coal,George Neal South,-6414.8,Coal,-18262.24,True
+2024-04,KS,,,,57696155,,Wolf Creek Generating Station,912836.0,Nuclear,Wolf Creek Generating Station,-4307.0,Nuclear,-12531.18,True
+2024-10,NM,,,,39697294,,Four Corners,952362.14,Coal,Arroyo Solar Energy Storage Hybrid,-1893.0,Other,-7575.0,True
+2024-12,SD,,,,20871994,,Oahe,263321.0,Hydroelectric Conventional,Clark (SD),-124.0,Distillate Fuel Oil,-578.42,True

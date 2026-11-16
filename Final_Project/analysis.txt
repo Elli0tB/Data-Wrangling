@@ -1,0 +1,28 @@
+1. Review Research Questions
+    Currently my reserch question is what states have the best power generation and which are the worst. 
+    Best will be defined by the most power generation, the cleanest generation, and the cheapest generation. 
+    Worst is just the flip of this. 
+
+    for me to awnser this we need to know the state's total generation, its consumption, the price of power, and the emisions they produce. 
+    Some more information to help give us a clearer understanding would be ideal. 
+    So we are also looking into power plant specifics to see which platns perform the best and worst to help us see why a state is under/over performing.
+
+2. Plan Your Analysis
+    Best and Worst States: 
+        Data: For this the data we are looking into is the majoraty of what exists in the csv's since i have cut out the unecessarcy data. 
+            We will be looking primaraly at price, the diffrence in generation and consumption, emisions intensity, best plant type, and worst plant type.
+        Scope: as for the scope of this, it is nationwide in the USA, and can be for any year we wish to examin from 1979-2025. 
+        that is from the time since we have recoreded this data to near present day, the only reason we cannont refine thsi data furter is due to majoraty of it being annual 
+        Method & Output: A good chunk of the data is already processed for us thankfully, however it is spread across multipule tables and needs to be condensed. 
+        Some of it such as the diffrence does need to be computed, for this we dont need to do any divsions to gater rates since they are already provided, such as price and emisions intensity.
+
+3. Perform and Interpret Your Analysis
+for this we made sevral tables a overall ranking, a diffrence ranking, emisions ranking, price, and a best & worst plant ranking, this helps us see where out main concerns should be when it come to our power infastucter.
+For this set 2018 is a confirmed clean year that has no missing data, the most recent set i have been using is 2024 this is due to 2025 being a recent addition.
+mentioned tables have been included in this. Any missing data has the missing data flag on, this will excluded it from any of the rankings, and inform you that they will be excluded. 
+Otherwise it can be assumed to be valid data and will be counted in the rankings
+
+This data gives us a near difinitive awnser to what is the best and worst state in terms of power. 
+The only exception to this are the excluded states, for them it is inconclusive what there power state is
+this does limit us from a fully difinitive awnser since we are missing states, to get around this we could look into avreges however that just hides the problem instead of making it clear. 
+Untill we have all the data for every state for a given year then we will not be able to say with 100% confidence what state is the best and worst, but we can get pretty close.
